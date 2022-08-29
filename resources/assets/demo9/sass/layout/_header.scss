@@ -1,0 +1,103 @@
+//
+// Header
+//
+
+// General
+.header-mobile {
+	display: none;;
+}
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+	align-items: center;
+	height: get($header-config, general, height, default);
+	background-color: var(--kt-header-general-bg-color);	
+
+	// Container
+	.header-container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+		
+	// Quick search
+	.header-search {
+		.search-icon {
+			color: var(--kt-header-search-icon-color);
+		}
+
+		.custom-form-control {
+			background-color: var(--kt-header-search-bg-color);
+			border-color: var(--kt-header-search-bg-color);
+			@include placeholder(var(--kt-header-search-placeholder-color));
+			color: var(--kt-header-search-font-color);
+		}		
+	} 
+
+	// Custom buttons
+	.btn-custom {
+		//$color, $icon-color, $border-color, $bg-color, $color-active, $icon-color-active, $border-color-active, $bg-color-active
+		@include button-custom-variant(
+			$color: null, 
+			$icon-color: var(--kt-header-button-icon-color), 
+			$border-color: var(--kt-header-button-bg-color), 
+			$bg-color: var(--kt-header-button-bg-color), 
+			$color-active: null, 
+			$icon-color-active: var(--kt-header-button-icon-color-active), 
+			$border-color-active: null, 
+			$bg-color-active: null
+		);
+	}
+}
+
+// Desktop mode
+@include media-breakpoint-up(lg) {
+	.header {
+		.header-container {
+			flex-grow: 1;
+		}
+
+		.header-offset {
+			height: get($header-config, general, offset);
+		}
+		
+		// Fixed header & sticky header modes
+		.header-fixed[data-kt-sticky-header="on"] & {
+			padding: 0 !important;
+			position: fixed;
+			align-items: center;
+			top: 0;
+			right: 0;			
+			left: get($aside-config, width, desktop);
+			box-shadow: var(--kt-header-general-box-shadow);
+			z-index: get($header-config, general, z-index);
+			height: get($header-config, general, height, sticky);
+
+			.header-offset {
+				display: none;
+			}
+		}	
+	}
+}
+
+// Tablet & mobile modes
+@include media-breakpoint-down(lg) {
+	.header {
+		height: auto;		
+		align-items: center;
+
+		.header-offset {
+			display: none;
+		}
+	}
+
+	.header-mobile {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		background-color: var(--kt-header-mobile-bg-color);
+	}
+}

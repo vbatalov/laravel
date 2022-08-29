@@ -1,0 +1,65 @@
+//
+// Root
+//
+
+// Light mode
+@include theme-light() {
+    // Page bg
+    --kt-page-bg: #{$page-bg};
+
+    // Header
+    --kt-header-general-bg-color: #{get($header-config, general, bg-color)};
+    --kt-header-general-box-shadow: #{get($header-config, general, box-shadow)};
+
+    --kt-header-search-icon-color: #{get($header-config, search, icon-color)};
+    --kt-header-search-bg-color: #{get($header-config, search, bg-color)};
+    --kt-header-search-placeholder-color: #{get($header-config, search, placeholder-color)};
+    --kt-header-search-font-color: #{get($header-config, search, font-color)};
+
+    --kt-header-button-icon-color: #{get($header-config, button, icon-color)};
+    --kt-header-button-bg-color: #{get($header-config, button, bg-color)};
+    --kt-header-button-icon-color-active: #{get($header-config, button, icon-color-active)};
+
+    --kt-header-mobile-bg-color: #{get($header-config, mobile, bg-color)};
+
+    // Aside
+    --kt-aside-bg-color: #{get($aside-config, bg-color)};
+    --kt-aside-box-shadow: #{get($aside-config, box-shadow)};
+
+    --kt-aside-menu-icon-bg-color: #{get($aside-config, menu-icon, bg-color)};
+    --kt-aside-menu-icon-bg-color-active: #{get($aside-config, menu-icon, bg-color-active)};
+    --kt-aside-menu-icon-icon-color: #{get($aside-config, menu-icon, icon-color)};
+    --kt-aside-menu-icon-icon-color-active: #{get($aside-config, menu-icon, icon-color-active)};
+    --kt-aside-menu-icon-icon-color-hover: #{get($aside-config, menu-icon, icon-color-hover)};
+}
+
+// Dark mode
+@include theme-dark() {
+    // Page bg
+    --kt-page-bg: #{$page-bg-dark};
+
+    // Header
+    --kt-header-general-bg-color: #{get($header-config, general, bg-color-dark)};
+    --kt-header-general-box-shadow: #{get($header-config, general, box-shadow-dark)};
+
+    --kt-header-search-icon-color: #{get($header-config, search, icon-color-dark)};
+    --kt-header-search-bg-color: #{get($header-config, search, bg-color-dark)};
+    --kt-header-search-placeholder-color: #{get($header-config, search, placeholder-color-dark)};
+    --kt-header-search-font-color: #{get($header-config, search, font-color-dark)};
+
+    --kt-header-button-icon-color: #{get($header-config, button, icon-color-dark)};
+    --kt-header-button-bg-color: #{get($header-config, button, bg-color-dark)};
+    --kt-header-button-icon-color-active: #{get($header-config, button, icon-color-active-dark)};
+
+    --kt-header-mobile-bg-color: #{get($header-config, mobile, bg-color-dark)};
+
+    // Aside
+    --kt-aside-bg-color: #{get($aside-config, bg-color-dark)};
+    --kt-aside-box-shadow: #{get($aside-config, box-shadow-dark)};
+
+    --kt-aside-menu-icon-bg-color: #{get($aside-config, menu-icon, bg-color-dark)};
+    --kt-aside-menu-icon-bg-color-active: #{get($aside-config, menu-icon, bg-color-active-dark)};
+    --kt-aside-menu-icon-icon-color: #{get($aside-config, menu-icon, icon-color-dark)};
+    --kt-aside-menu-icon-icon-color-active: #{get($aside-config, menu-icon, icon-color-active-dark)};
+    --kt-aside-menu-icon-icon-color-hover: #{get($aside-config, menu-icon, icon-color-hover-dark)};
+}
