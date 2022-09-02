@@ -34,7 +34,7 @@ class AppServiceProvider extends ServiceProvider
 
         // Set demo globally
         //$theme->setDemo(request()->input('demo', 'demo1'));
-        $theme->setDemo('demo1');
+        $theme->setDemo('demo3');
 
         $theme->initConfig();
 
