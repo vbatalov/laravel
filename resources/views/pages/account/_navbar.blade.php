@@ -1,7 +1,7 @@
 @php
     $nav = array(
-        array('title' => 'Overview', 'view' => 'account/overview'),
-        array('title' => 'Settings', 'view' => 'account/settings'),
+        array('title' => 'Просмотр', 'view' => 'account/overview'),
+        array('title' => 'Настройки', 'view' => 'account/settings'),
         // array('title' => 'Security', 'view' => ''),
     );
 @endphp
@@ -57,23 +57,23 @@
                     <!--end::User-->
 
                     <!--begin::Actions-->
-                    <div class="d-flex my-4">
-                        <a href="#" class="btn btn-sm btn-light me-2" id="kt_user_follow_button">
-                            {!! theme()->getSvgIcon("icons/duotune/arrows/arr012.svg", "svg-icon-3 d-none") !!}
-                            {{ theme()->getView('partials/general/_button-indicator', array('label' => 'Follow')) }}
-                        </a>
+{{--                    <div class="d-flex my-4">--}}
+{{--                        <a href="#" class="btn btn-sm btn-light me-2" id="kt_user_follow_button">--}}
+{{--                            {!! theme()->getSvgIcon("icons/duotune/arrows/arr012.svg", "svg-icon-3 d-none") !!}--}}
+{{--                            {{ theme()->getView('partials/general/_button-indicator', array('label' => 'Follow')) }}--}}
+{{--                        </a>--}}
 
-                        <a href="#" class="btn btn-sm btn-primary me-3" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-trigger="hover" title="Coming soon">Hire Me</a>
+{{--                        <a href="#" class="btn btn-sm btn-primary me-3" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-trigger="hover" title="Coming soon">Hire Me</a>--}}
 
-                        <!--begin::Menu-->
-                        <div class="me-0">
-                            <button class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
-                                <i class="bi bi-three-dots fs-3"></i>
-                            </button>
-                            {{ theme()->getView('partials/menus/_menu-3') }}
-                        </div>
-                        <!--end::Menu-->
-                    </div>
+{{--                        <!--begin::Menu-->--}}
+{{--                        <div class="me-0">--}}
+{{--                            <button class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">--}}
+{{--                                <i class="bi bi-three-dots fs-3"></i>--}}
+{{--                            </button>--}}
+{{--                            {{ theme()->getView('partials/menus/_menu-3') }}--}}
+{{--                        </div>--}}
+{{--                        <!--end::Menu-->--}}
+{{--                    </div>--}}
                     <!--end::Actions-->
                 </div>
                 <!--end::Title-->
@@ -89,12 +89,12 @@
                                 <!--begin::Number-->
                                 <div class="d-flex align-items-center">
                                     {!! theme()->getSvgIcon("icons/duotune/arrows/arr066.svg", "svg-icon-3 svg-icon-success me-2") !!}
-                                    <div class="fs-2 fw-bolder" data-kt-countup="true" data-kt-countup-value="4500" data-kt-countup-prefix="$">0</div>
+                                    <div class="fs-2 fw-bolder" data-kt-countup="true" data-kt-countup-value="5"  data-kt-countup-separator=" " data-kt-countup-decimal-places="0" data-kt-countup-suffix="">0</div>
                                 </div>
                                 <!--end::Number-->
 
                                 <!--begin::Label-->
-                                <div class="fw-bold fs-6 text-gray-400">{{ __('Earnings') }}</div>
+                                <div class="fw-bold fs-6 text-gray-400">{{ __('Покупатель') }}</div>
                                 <!--end::Label-->
                             </div>
                             <!--end::Stat-->
@@ -104,12 +104,12 @@
                                 <!--begin::Number-->
                                 <div class="d-flex align-items-center">
                                     {!! theme()->getSvgIcon("icons/duotune/arrows/arr065.svg", "svg-icon-3 svg-icon-danger me-2") !!}
-                                    <div class="fs-2 fw-bolder" data-kt-countup="true" data-kt-countup-value="75">0</div>
+                                    <div class="fs-2 fw-bolder" data-kt-countup="true" data-kt-countup-value="3"  data-kt-countup-separator=" " data-kt-countup-decimal-places="" data-kt-countup-suffix="">0</div>
                                 </div>
                                 <!--end::Number-->
 
                                 <!--begin::Label-->
-                                <div class="fw-bold fs-6 text-gray-400">{{ __('Projects') }}</div>
+                                <div class="fw-bold fs-6 text-gray-400">{{ __('Продавец') }}</div>
                                 <!--end::Label-->
                             </div>
                             <!--end::Stat-->
@@ -119,15 +119,31 @@
                                 <!--begin::Number-->
                                 <div class="d-flex align-items-center">
                                     {!! theme()->getSvgIcon("icons/duotune/arrows/arr066.svg", "svg-icon-3 svg-icon-success me-2") !!}
-                                    <div class="fs-2 fw-bolder" data-kt-countup="true" data-kt-countup-value="60" data-kt-countup-prefix="%">0</div>
+                                    <div class="fs-2 fw-bolder" data-kt-countup="true" data-kt-countup-value="4698.43"  data-kt-countup-separator=" " data-kt-countup-decimal-places="2" data-kt-countup-suffix="м³">0</div>
                                 </div>
                                 <!--end::Number-->
 
                                 <!--begin::Label-->
-                                <div class="fw-bold fs-6 text-gray-400">{{ __('Success Rate') }}</div>
+                                <div class="fw-bold fs-6 text-gray-400">{{ __('Принято') }}</div>
                                 <!--end::Label-->
                             </div>
                             <!--end::Stat-->
+
+                            <!--begin::Stat-->
+                            <div class="border border-gray-300 border-dashed rounded min-w-125px py-3 px-4 me-6 mb-3">
+                                <!--begin::Number-->
+                                <div class="d-flex align-items-center">
+                                    {!! theme()->getSvgIcon("icons/duotune/arrows/arr066.svg", "svg-icon-3 svg-icon-success me-2") !!}
+                                    <div class="fs-2 fw-bolder" data-kt-countup="true" data-kt-countup-value="4698.43"  data-kt-countup-separator=" " data-kt-countup-decimal-places="2" data-kt-countup-suffix="м³">0</div>
+                                </div>
+                                <!--end::Number-->
+
+                                <!--begin::Label-->
+                                <div class="fw-bold fs-6 text-gray-400">{{ __('Отгружено') }}</div>
+                                <!--end::Label-->
+                            </div>
+                            <!--end::Stat-->
+
                         </div>
                         <!--end::Stats-->
                     </div>
