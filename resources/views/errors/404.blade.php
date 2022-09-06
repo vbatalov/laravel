@@ -17,7 +17,7 @@
             <!--end::Illustration-->
             <!--begin::Link-->
             <div class="mb-0">
-                <a href="/" class="btn btn-sm btn-primary">Return Home</a>
+                <a href="/" class="btn btn-sm btn-primary">Вернуться домой</a>
             </div>
             <!--end::Link-->
         </div>

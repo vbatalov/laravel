@@ -20,7 +20,7 @@ return array(
                     'title'       => 'Extended License',
                     'description' => 'For single SaaS app with paying users',
                     'tooltip'     => 'Use, by you or one client, in a single end product which end users can be charged for.',
-                    'price'       => '939',
+                    'price'       => '9309',
                 ),
             ),
         ),
@@ -198,9 +198,9 @@ return array(
 
     // Meta
     'meta'    => array(
-        'title'       => 'Metronic - the world\'s #1 selling Bootstrap Admin Theme Ecosystem for HTML, Vue, React, Angular & Laravel',
+        'title'       => 'ФГИСЛК - Эксперт',
         'description' => 'The most advanced Bootstrap Admin Theme on Themeforest trusted by 94,000 beginners and professionals. Multi-demo, Dark Mode, RTL support and complete React, Angular, Vue & Laravel versions. Grab your copy now and get life-time updates for free.',
-        'keywords'    => 'Metronic, bootstrap, bootstrap 5, Angular, VueJs, React, Laravel, admin themes, web design, figma, web development, free templates, free admin themes, bootstrap theme, bootstrap template, bootstrap dashboard, bootstrap dak mode, bootstrap button, bootstrap datepicker, bootstrap timepicker, fullcalendar, datatables, flaticon',
+        'keywords'    => 'ФГИС ЛК, ФГИСЛК, ЛЕС ЕГАИС, ЕГАИС ЛЕС, ЛЕСЕГАИС, lesegais, fgislk, egais les',
         'canonical'   => 'https://preview.keenthemes.com/metronic8',
     ),
 

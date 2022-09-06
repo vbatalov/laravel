@@ -8,49 +8,50 @@
     <!--begin::Heading-->
         <div class="text-center mb-11">
             <!--begin::Title-->
-            <h1 class="text-dark fw-bolder mb-3">Sign In</h1>
+            <h1 class="text-dark fw-bolder mb-3">Войти</h1>
             <!--end::Title-->
             <!--begin::Subtitle-->
-            <div class="text-gray-500 fw-semibold fs-6">Your Social Campaigns</div>
+            <div class="text-gray-500 fw-semibold fs-6">С помощью социальных сервисов</div>
             <!--end::Subtitle=-->
         </div>
         <!--begin::Heading-->
         <!--begin::Login options-->
         <div class="row g-3 mb-9">
             <!--begin::Col-->
-            <div class="col-md-6">
+            <div class="col-md-12">
                 <!--begin::Google link=-->
                 <a href="{{ url('/auth/redirect/google') }}?redirect_uri={{ url()->previous() }}" class="btn btn-flex btn-outline btn-text-gray-700 btn-active-color-primary bg-state-light flex-center text-nowrap w-100">
-                    <img alt="Logo" src="{{ asset(theme()->getMediaUrlPath() . 'svg/brand-logos/google-icon.svg') }}" class="h-15px me-3">Sign in with Google</a>
+                    <img alt="Logo" src="{{ asset(theme()->getMediaUrlPath() . 'svg/brand-logos/google-icon.svg') }}" class="h-15px me-3">Войти через Google</a>
                 <!--end::Google link=-->
             </div>
             <!--end::Col-->
             <!--begin::Col-->
-            <div class="col-md-6">
-                <!--begin::Google link=-->
-                <a href="{{ url('/auth/redirect/apple') }}?redirect_uri={{ url()->previous() }}" class="btn btn-flex btn-outline btn-text-gray-700 btn-active-color-primary bg-state-light flex-center text-nowrap w-100">
-                    <img alt="Logo" src="{{ asset(theme()->getMediaUrlPath() . 'svg/brand-logos/apple-black.svg') }}" class="theme-light-show h-15px me-3">
-                    <img alt="Logo" src="{{ asset(theme()->getMediaUrlPath() . 'svg/brand-logos/apple-black-dark.svg') }}" class="theme-dark-show h-15px me-3">Sign in with Apple</a>
-                <!--end::Google link=-->
-            </div>
+            {{--  Авторизация через Apple --}}
+{{--            <div class="col-md-6">--}}
+{{--                <!--begin::Google link=-->--}}
+{{--                <a href="{{ url('/auth/redirect/apple') }}?redirect_uri={{ url()->previous() }}" class="btn btn-flex btn-outline btn-text-gray-700 btn-active-color-primary bg-state-light flex-center text-nowrap w-100">--}}
+{{--                    <img alt="Logo" src="{{ asset(theme()->getMediaUrlPath() . 'svg/brand-logos/apple-black.svg') }}" class="theme-light-show h-15px me-3">--}}
+{{--                    <img alt="Logo" src="{{ asset(theme()->getMediaUrlPath() . 'svg/brand-logos/apple-black-dark.svg') }}" class="theme-dark-show h-15px me-3">Sign in with Apple</a>--}}
+{{--                <!--end::Google link=-->--}}
+{{--            </div>--}}
             <!--end::Col-->
         </div>
         <!--end::Login options-->
         <!--begin::Separator-->
         <div class="separator separator-content my-14">
-            <span class="w-125px text-gray-500 fw-semibold fs-7">Or with email</span>
+            <span class="w-340px text-gray-500 fw-semibold fs-7">Или используйте Email и пароль</span>
         </div>
         <!--end::Separator-->
         <!--begin::Input group=-->
         <div class="fv-row mb-8 fv-plugins-icon-container fv-plugins-bootstrap5-row-valid">
             <!--begin::Email-->
-            <input type="text" placeholder="Email" name="email" autocomplete="off" class="form-control bg-transparent" value="{{ old('email', 'demo@demo.com') }}" required autofocus>
+            <input type="text" placeholder="Email" name="email" autocomplete="off" class="form-control bg-transparent" required autofocus>
             <!--end::Email-->
         </div>
         <!--end::Input group=-->
         <div class="fv-row mb-3 fv-plugins-icon-container fv-plugins-bootstrap5-row-valid">
             <!--begin::Password-->
-            <input type="password" placeholder="Password" name="password" autocomplete="off" class="form-control bg-transparent" value="demo">
+            <input type="password" placeholder="Пароль" name="password" autocomplete="off" class="form-control bg-transparent">
             <!--end::Password-->
         </div>
         <!--end::Input group=-->
@@ -59,7 +60,7 @@
             <div></div>
             @if (Route::has('password.request'))
             <!--begin::Link-->
-                <a href="{{ theme()->getPageUrl('password.request') }}" class="link-primary">Forgot Password ?</a>
+                <a href="{{ theme()->getPageUrl('password.request') }}" class="link-primary">Забыли пароль?</a>
                 <!--end::Link-->
             @endif
         </div>
@@ -67,13 +68,13 @@
         <!--begin::Submit button-->
         <div class="d-grid mb-10">
             <button type="submit" id="kt_sign_in_submit" class="btn btn-primary">
-                @include('partials.general._button-indicator', ['label' => __('Continue')])
+                @include('partials.general._button-indicator', ['label' => __('Продолжить')])
             </button>
         </div>
         <!--end::Submit button-->
         <!--begin::Sign up-->
-        <div class="text-gray-500 text-center fw-semibold fs-6">Not a Member yet?
-            <a href="{{ theme()->getPageUrl('register') }}" class="link-primary">Sign up</a></div>
+        <div class="text-gray-500 text-center fw-semibold fs-6">У вас нет аккаунта?
+            <a href="{{ theme()->getPageUrl('register') }}" class="link-primary">Регистрация</a></div>
         <!--end::Sign up-->
         <div></div>
     </form>

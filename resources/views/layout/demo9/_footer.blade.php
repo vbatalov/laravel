@@ -4,7 +4,7 @@
     <div class="{{ theme()->printHtmlClasses('footer-container', false) }} d-flex flex-column flex-md-row flex-stack">
         <!--begin::Copyright-->
         <div class="text-dark order-2 order-md-1">
-            <span class="text-gray-400 fw-bold me-1">Created by</span>
+            <span class="text-gray-400 fw-bold me-1">Все права защищены ФГИСЛК.Эксперт</span>
             <a href="{{ theme()->getOption('general', 'website') }}" target="_blank" class="text-muted text-hover-primary fw-bold me-2 fs-6">Keenthemes</a>
         </div>
         <!--end::Copyright-->

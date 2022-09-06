@@ -6,37 +6,38 @@
     <!--begin::Heading-->
         <div class="text-center mb-11">
             <!--begin::Title-->
-            <h1 class="text-dark fw-bolder mb-3">Sign Up</h1>
+            <h1 class="text-dark fw-bolder mb-3">Регистрация</h1>
             <!--end::Title-->
             <!--begin::Subtitle-->
-            <div class="text-gray-500 fw-semibold fs-6">Your Social Campaigns</div>
+            <div class="text-gray-500 fw-semibold fs-6">С помощью социальных сервисов</div>
             <!--end::Subtitle=-->
         </div>
         <!--begin::Heading-->
         <!--begin::Login options-->
         <div class="row g-3 mb-9">
             <!--begin::Col-->
-            <div class="col-md-6">
+            <div class="col-md-12">
                 <!--begin::Google link=-->
                 <a href="{{ url('/auth/redirect/google') }}?redirect_uri={{ url()->previous() }}" class="btn btn-flex btn-outline btn-text-gray-700 btn-active-color-primary bg-state-light flex-center text-nowrap w-100">
-                    <img alt="Logo" src="{{ asset(theme()->getMediaUrlPath() . 'svg/brand-logos/google-icon.svg') }}" class="h-15px me-3">Sign in with Google</a>
+                    <img alt="Logo" src="{{ asset(theme()->getMediaUrlPath() . 'svg/brand-logos/google-icon.svg') }}" class="h-15px me-3">Регистрация через Google</a>
                 <!--end::Google link=-->
             </div>
             <!--end::Col-->
             <!--begin::Col-->
-            <div class="col-md-6">
-                <!--begin::Google link=-->
-                <a href="{{ url('/auth/redirect/apple') }}?redirect_uri={{ url()->previous() }}" class="btn btn-flex btn-outline btn-text-gray-700 btn-active-color-primary bg-state-light flex-center text-nowrap w-100">
-                    <img alt="Logo" src="{{ asset(theme()->getMediaUrlPath() . 'svg/brand-logos/apple-black.svg') }}" class="theme-light-show h-15px me-3">
-                    <img alt="Logo" src="{{ asset(theme()->getMediaUrlPath() . 'svg/brand-logos/apple-black-dark.svg') }}" class="theme-dark-show h-15px me-3">Sign in with Apple</a>
-                <!--end::Google link=-->
-            </div>
+{{--            Регистрация через Apple--}}
+{{--            <div class="col-md-6">--}}
+{{--                <!--begin::Google link=-->--}}
+{{--                <a href="{{ url('/auth/redirect/apple') }}?redirect_uri={{ url()->previous() }}" class="btn btn-flex btn-outline btn-text-gray-700 btn-active-color-primary bg-state-light flex-center text-nowrap w-100">--}}
+{{--                    <img alt="Logo" src="{{ asset(theme()->getMediaUrlPath() . 'svg/brand-logos/apple-black.svg') }}" class="theme-light-show h-15px me-3">--}}
+{{--                    <img alt="Logo" src="{{ asset(theme()->getMediaUrlPath() . 'svg/brand-logos/apple-black-dark.svg') }}" class="theme-dark-show h-15px me-3">Sign in with Apple</a>--}}
+{{--                <!--end::Google link=-->--}}
+{{--            </div>--}}
             <!--end::Col-->
         </div>
         <!--end::Login options-->
         <!--begin::Separator-->
         <div class="separator separator-content my-14">
-            <span class="w-125px text-gray-500 fw-semibold fs-7">Or with email</span>
+            <span class="w-165px text-gray-500 fw-semibold fs-7">Или через Email</span>
         </div>
         <!--end::Separator-->
 
@@ -45,13 +46,13 @@
         <div class="row fv-row mb-7">
             <!--begin::Col-->
             <div class="col-xl-6">
-                <input class="form-control form-control-lg form-control-solid" type="text" name="first_name" autocomplete="off" value="{{ old('first_name') }}" placeholder="First Name"/>
+                <input class="form-control form-control-lg form-control-solid" type="text" name="first_name" autocomplete="off" value="{{ old('first_name') }}" placeholder="Ваше имя"/>
             </div>
             <!--end::Col-->
 
             <!--begin::Col-->
             <div class="col-xl-6">
-                <input class="form-control form-control-lg form-control-solid" type="text" name="last_name" autocomplete="off" value="{{ old('last_name') }}" placeholder="Last Name"/>
+                <input class="form-control form-control-lg form-control-solid" type="text" name="last_name" autocomplete="off" value="{{ old('last_name') }}" placeholder="Ваша фамилия"/>
             </div>
             <!--end::Col-->
         </div>
@@ -70,7 +71,7 @@
             <div class="mb-1">
                 <!--begin::Input wrapper-->
                 <div class="position-relative mb-3">
-                    <input class="form-control bg-transparent" type="password" placeholder="Password" name="password" autocomplete="off">
+                    <input class="form-control bg-transparent" type="password" placeholder="Пароль" name="password" autocomplete="off">
                     <span class="btn btn-sm btn-icon position-absolute translate-middle top-50 end-0 me-n2" data-kt-password-meter-control="visibility">
                         <i class="bi bi-eye-slash fs-2"></i>
                         <i class="bi bi-eye fs-2 d-none"></i>
@@ -88,14 +89,16 @@
             </div>
             <!--end::Wrapper-->
             <!--begin::Hint-->
-            <div class="text-muted">Use 8 or more characters with a mix of letters, numbers &amp; symbols.</div>
+            <div class="text-muted">
+                Используйте 8 или более букв, цифр и символов.
+            </div>
             <!--end::Hint-->
         </div>
         <!--end::Input group=-->
         <!--end::Input group=-->
         <div class="fv-row mb-8 fv-plugins-icon-container">
             <!--begin::Repeat Password-->
-            <input placeholder="Repeat Password" name="password_confirmation" type="password" autocomplete="off" class="form-control bg-transparent">
+            <input placeholder="Повторите пароль" name="password_confirmation" type="password" autocomplete="off" class="form-control bg-transparent">
             <!--end::Repeat Password-->
         </div>
         <!--end::Input group=-->
@@ -103,8 +106,8 @@
         <div class="fv-row mb-8 fv-plugins-icon-container">
             <label class="form-check form-check-inline">
                 <input class="form-check-input" type="checkbox" name="toc" value="1">
-                <span class="form-check-label fw-semibold text-gray-700 fs-base ms-1">I Accept the
-                    <a href="#" class="ms-1 link-primary">Terms</a></span>
+                <span class="form-check-label fw-semibold text-gray-700 fs-base ms-1">Я принимаю
+                    <a href="#" class="ms-1 link-primary">Уловия пользования</a></span>
             </label>
         </div>
         <!--end::Accept-->
@@ -116,8 +119,8 @@
         </div>
         <!--end::Submit button-->
         <!--begin::Sign up-->
-        <div class="text-gray-500 text-center fw-semibold fs-6">Already have an Account?
-            <a href="{{ theme()->getPageUrl('login') }}" class="link-primary fw-semibold">Sign in</a></div>
+        <div class="text-gray-500 text-center fw-semibold fs-6">У вас уже есть аккаунт?
+            <a href="{{ theme()->getPageUrl('login') }}" class="link-primary fw-semibold">Войти</a></div>
         <!--end::Sign up-->
         <div></div>
     </form>
