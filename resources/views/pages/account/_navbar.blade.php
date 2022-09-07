@@ -46,7 +46,7 @@
                                     Professional
                                 </a>
                             @else
-                                <a href="#" class="btn btn-sm btn-light-success fw-bold ms-2 fs-8 py-1 px-3" data-bs-toggle="modal" data-bs-target="#kt_modal_upgrade_plan">
+                                <a href="#" class="btn btn-sm btn-light-primary fw-bold ms-2 fs-8 py-1 px-3" data-bs-toggle="modal" data-bs-target="#kt_modal_upgrade_plan">
                                     Разблокируйте Pro
                                 </a>
                             @endif
