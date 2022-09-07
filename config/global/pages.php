@@ -121,6 +121,7 @@ return array(
                 'custom' => array(
                     'js' => array(
                         'js/custom/widgets.js',
+                        'js/custom/utilities/upgrade-plan.js',
                     ),
                 ),
             ),

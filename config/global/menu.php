@@ -197,7 +197,7 @@ return array(
     'main'          => array(
         //// Dashboard
         array(
-            'title' => 'Dashboard',
+            'title' => 'Мониторинг',
             'path'  => '',
             'icon'  => theme()->getSvgIcon("demo1/media/icons/duotune/art/art002.svg", "svg-icon-2"),
         ),
@@ -210,12 +210,12 @@ return array(
 
         // Account
         array(
-            'title'      => 'Управление аккаунтом',
+            'title'      => 'Аккаунт',
             'icon'       => array(
                 'svg'  => theme()->getSvgIcon("demo1/media/icons/duotune/communication/com006.svg", "svg-icon-2"),
                 'font' => '<i class="bi bi-person fs-2"></i>',
             ),
-            'classes'    => array('item' => 'menu-accordion'),
+            'classes'    => array('item' => 'menu-accordion pulse'),
             'attributes' => array(
                 "data-kt-menu-trigger" => "click",
             ),
@@ -228,7 +228,7 @@ return array(
                         'bullet' => '<span class="bullet bullet-dot"></span>',
                         'attributes' => array(
                             'link' => array(
-                                "title"             => "Информация о вашем профиле",
+                                "title"             => "Информация о вашем аккаунте",
                                 "data-bs-toggle"    => "tooltip",
                                 "data-bs-trigger"   => "hover",
                                 "data-bs-dismiss"   => "click",
@@ -270,7 +270,7 @@ return array(
 
         // ЛесЕГАИС
         array(
-            'title'      => 'Отслеживание сделок',
+            'title'      => 'Возможности',
             'icon'       => array(
                 'svg'  => theme()->getSvgIcon("demo1/media/icons/duotune/communication/com006.svg", "svg-icon-2"),
                 'font' => '<i class="bi bi-person fs-2"></i>',
@@ -283,12 +283,12 @@ return array(
                 'class' => 'menu-sub-accordion menu-active-bg',
                 'items' => array(
                     array(
-                        'title'  => 'Настройки отслеживания',
-                        'path'   => 'account/overview',
+                        'title'  => 'Мои компании',
+                        'path'   => 'deals/overview',
                         'bullet' => '<span class="bullet bullet-dot"></span>',
                         'attributes' => array(
                             'link' => array(
-                                "title"             => "Настройте уведомления о сделках и измении отчетов",
+                                "title"             => "Компании, которые Вы отслеживаете",
                                 "data-bs-toggle"    => "tooltip",
                                 "data-bs-trigger"   => "hover",
                                 "data-bs-dismiss"   => "click",
@@ -297,12 +297,12 @@ return array(
                         ),
                     ),
                     array(
-                        'title'  => 'Настройки',
-                        'path'   => 'account/settings',
+                        'title'  => 'Уведомления',
+                        'path'   => 'deals/settings',
                         'bullet' => '<span class="bullet bullet-dot"></span>',
                         'attributes' => array(
                             'link' => array(
-                                "title"             => "Настройки аккаунта",
+                                "title"             => "Настройте уведомления о сделках",
                                 "data-bs-toggle"    => "tooltip",
                                 "data-bs-trigger"   => "hover",
                                 "data-bs-dismiss"   => "click",
