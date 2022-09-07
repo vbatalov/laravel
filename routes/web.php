@@ -10,6 +10,8 @@ use App\Http\Controllers\PagesController;
 use App\Http\Controllers\UsersController;
 use Illuminate\Support\Facades\Route;
 
+// Сделки с древесиной
+use App\Http\Controllers\DealsController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -65,6 +67,11 @@ Route::middleware('auth')->group(function () {
         Route::resource('system', SystemLogsController::class)->only(['index', 'destroy']);
         Route::resource('audit', AuditLogsController::class)->only(['index', 'destroy']);
     });
+});
+
+// Сделки с древесиной
+Route::middleware('auth')->group(function () {
+    Route::get('/deals', [DealsController::class, 'index']);
 });
 
 Route::resource('users', UsersController::class);

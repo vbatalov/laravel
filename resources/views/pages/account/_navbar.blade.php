@@ -216,8 +216,8 @@
                 <div class="d-flex flex-column">
                     <!--begin::Nav group-->
                     <div class="nav-group nav-group-outline mx-auto" data-kt-buttons="true" data-kt-initialized="1">
-                        <button class="btn btn-color-gray-400 btn-active btn-active-secondary px-6 py-3 me-2 active" data-kt-plan="month">Ежемесячно</button>
-                        <button class="btn btn-color-gray-400 btn-active btn-active-secondary px-6 py-3" data-kt-plan="annual">Годовая подписка</button>
+                        <button class="btn btn-color-gray-400 btn-active btn-active-secondary px-6 py-3 me-2 active" data-kt-plan="month">Годовая подписка</button>
+                        <button class="btn btn-color-gray-400 btn-active btn-active-secondary px-6 py-3" data-kt-plan="annual">Ежемесячно</button>
                     </div>
                     <!--end::Nav group-->
                     <!--begin::Row-->
@@ -237,18 +237,18 @@
                                         <!--end::Radio-->
                                         <!--begin::Info-->
                                         <div class="flex-grow-1">
-                                            <div class="d-flex align-items-center fs-2 fw-bold flex-wrap">Startup</div>
-                                            <div class="fw-semibold opacity-75">Best for startups</div>
+                                            <div class="d-flex align-items-center fs-2 fw-bold flex-wrap">Старт</div>
+                                            <div class="fw-semibold opacity-75">Для предпринимателя</div>
                                         </div>
                                         <!--end::Info-->
                                     </div>
                                     <!--end::Description-->
                                     <!--begin::Price-->
                                     <div class="ms-5">
-                                        <span class="mb-2">$</span>
-                                        <span class="fs-3x fw-bold" data-kt-plan-price-month="39" data-kt-plan-price-annual="399">39</span>
+                                        <span class="mb-2">₽</span>
+                                        <span class="fs-3x fw-bold" data-kt-plan-price-month="49" data-kt-plan-price-annual="99">49</span>
                                         <span class="fs-7 opacity-50">/
-												<span data-kt-element="period">Mon</span></span>
+												<span data-kt-element="period">Мес</span></span>
                                     </div>
                                     <!--end::Price-->
                                 </label>
@@ -264,18 +264,21 @@
                                         <!--end::Radio-->
                                         <!--begin::Info-->
                                         <div class="flex-grow-1">
-                                            <div class="d-flex align-items-center fs-2 fw-bold flex-wrap">Advanced</div>
-                                            <div class="fw-semibold opacity-75">Best for 100+ team size</div>
+                                            <div class="d-flex align-items-center fs-2 fw-bold flex-wrap">
+                                                Бизнес
+                                                <span class="badge badge-light-success ms-2 py-2 px-3 fs-7">Популярный</span>
+                                            </div>
+                                            <div class="fw-semibold opacity-75">Для специалистов и бухгалтеров</div>
                                         </div>
                                         <!--end::Info-->
                                     </div>
                                     <!--end::Description-->
                                     <!--begin::Price-->
                                     <div class="ms-5">
-                                        <span class="mb-2">$</span>
-                                        <span class="fs-3x fw-bold" data-kt-plan-price-month="339" data-kt-plan-price-annual="3399">339</span>
+                                        <span class="mb-2">₽</span>
+                                        <span class="fs-3x fw-bold" data-kt-plan-price-month="199" data-kt-plan-price-annual="299">199</span>
                                         <span class="fs-7 opacity-50">/
-												<span data-kt-element="period">Mon</span></span>
+												<span data-kt-element="period">Мес</span></span>
                                     </div>
                                     <!--end::Price-->
                                 </label>
@@ -291,19 +294,21 @@
                                         <!--end::Radio-->
                                         <!--begin::Info-->
                                         <div class="flex-grow-1">
-                                            <div class="d-flex align-items-center fs-2 fw-bold flex-wrap">Enterprise
-                                                <span class="badge badge-light-success ms-2 py-2 px-3 fs-7">Popular</span></div>
-                                            <div class="fw-semibold opacity-75">Best value for 1000+ team</div>
+                                            <div class="d-flex align-items-center fs-2 fw-bold flex-wrap">
+                                                Профессиоанальный
+
+                                            </div>
+                                            <div class="fw-semibold opacity-75">Ваш бизнес под нашим контролем</div>
                                         </div>
                                         <!--end::Info-->
                                     </div>
                                     <!--end::Description-->
                                     <!--begin::Price-->
                                     <div class="ms-5">
-                                        <span class="mb-2">$</span>
-                                        <span class="fs-3x fw-bold" data-kt-plan-price-month="999" data-kt-plan-price-annual="9999">999</span>
+                                        <span class="mb-2">₽</span>
+                                        <span class="fs-3x fw-bold" data-kt-plan-price-month="2999" data-kt-plan-price-annual="4999">2999</span>
                                         <span class="fs-7 opacity-50">/
-												<span data-kt-element="period">Mon</span></span>
+												<span data-kt-element="period">Мес</span></span>
                                     </div>
                                     <!--end::Price-->
                                 </label>
@@ -344,15 +349,15 @@
                                 <div class="tab-pane fade active show" id="kt_upgrade_plan_startup" role="tabpanel">
                                     <!--begin::Heading-->
                                     <div class="pb-5">
-                                        <h2 class="fw-bold text-dark">What’s in Startup Plan?</h2>
-                                        <div class="text-muted fw-semibold">Optimal for 10+ team size and new startup</div>
+                                        <h2 class="fw-bold text-dark">Для кого тариф «Старт»?</h2>
+                                        <div class="text-muted fw-semibold">Если Вы отслеживаете только свой бизнес</div>
                                     </div>
                                     <!--end::Heading-->
                                     <!--begin::Body-->
                                     <div class="pt-1">
                                         <!--begin::Item-->
                                         <div class="d-flex align-items-center mb-7">
-                                            <span class="fw-semibold fs-5 text-gray-700 flex-grow-1">Up to 10 Active Users</span>
+                                            <span class="fw-semibold fs-5 text-gray-700 flex-grow-1">Отслеживание двух компаний</span>
                                             <!--begin::Svg Icon | path: icons/duotune/general/gen043.svg-->
                                             <span class="svg-icon svg-icon-1 svg-icon-success">
 														<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -365,7 +370,7 @@
                                         <!--end::Item-->
                                         <!--begin::Item-->
                                         <div class="d-flex align-items-center mb-7">
-                                            <span class="fw-semibold fs-5 text-gray-700 flex-grow-1">Up to 30 Project Integrations</span>
+                                            <span class="fw-semibold fs-5 text-gray-700 flex-grow-1">Уведомления о новых сделках</span>
                                             <!--begin::Svg Icon | path: icons/duotune/general/gen043.svg-->
                                             <span class="svg-icon svg-icon-1 svg-icon-success">
 														<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -378,7 +383,7 @@
                                         <!--end::Item-->
                                         <!--begin::Item-->
                                         <div class="d-flex align-items-center mb-7">
-                                            <span class="fw-semibold fs-5 text-gray-700 flex-grow-1">Analytics Module</span>
+                                            <span class="fw-semibold fs-5 text-gray-700 flex-grow-1">Уведомления при изменении отчетов</span>
                                             <!--begin::Svg Icon | path: icons/duotune/general/gen043.svg-->
                                             <span class="svg-icon svg-icon-1 svg-icon-success">
 														<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -391,7 +396,7 @@
                                         <!--end::Item-->
                                         <!--begin::Item-->
                                         <div class="d-flex align-items-center mb-7">
-                                            <span class="fw-semibold fs-5 text-muted flex-grow-1">Finance Module</span>
+                                            <span class="fw-semibold fs-5 text-muted flex-grow-1">Отслеживание конкурентов</span>
                                             <!--begin::Svg Icon | path: icons/duotune/general/gen040.svg-->
                                             <span class="svg-icon svg-icon-1">
 														<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -405,7 +410,7 @@
                                         <!--end::Item-->
                                         <!--begin::Item-->
                                         <div class="d-flex align-items-center mb-7">
-                                            <span class="fw-semibold fs-5 text-muted flex-grow-1">Accounting Module</span>
+                                            <span class="fw-semibold fs-5 text-muted flex-grow-1">Доступ к документации и курсам</span>
                                             <!--begin::Svg Icon | path: icons/duotune/general/gen040.svg-->
                                             <span class="svg-icon svg-icon-1">
 														<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -419,7 +424,7 @@
                                         <!--end::Item-->
                                         <!--begin::Item-->
                                         <div class="d-flex align-items-center mb-7">
-                                            <span class="fw-semibold fs-5 text-muted flex-grow-1">Network Platform</span>
+                                            <span class="fw-semibold fs-5 text-muted flex-grow-1">Поддержка 24/7</span>
                                             <!--begin::Svg Icon | path: icons/duotune/general/gen040.svg-->
                                             <span class="svg-icon svg-icon-1">
 														<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -433,7 +438,7 @@
                                         <!--end::Item-->
                                         <!--begin::Item-->
                                         <div class="d-flex align-items-center">
-                                            <span class="fw-semibold fs-5 text-muted flex-grow-1">Unlimited Cloud Space</span>
+                                            <span class="fw-semibold fs-5 text-muted flex-grow-1">Введение ВЭД</span>
                                             <!--begin::Svg Icon | path: icons/duotune/general/gen040.svg-->
                                             <span class="svg-icon svg-icon-1">
 														<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -461,7 +466,7 @@
                                     <div class="pt-1">
                                         <!--begin::Item-->
                                         <div class="d-flex align-items-center mb-7">
-                                            <span class="fw-semibold fs-5 text-gray-700 flex-grow-1">Up to 10 Active Users</span>
+                                            <span class="fw-semibold fs-5 text-gray-700 flex-grow-1">Возможности тарифа «Старт»</span>
                                             <!--begin::Svg Icon | path: icons/duotune/general/gen043.svg-->
                                             <span class="svg-icon svg-icon-1 svg-icon-success">
 														<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -474,7 +479,7 @@
                                         <!--end::Item-->
                                         <!--begin::Item-->
                                         <div class="d-flex align-items-center mb-7">
-                                            <span class="fw-semibold fs-5 text-gray-700 flex-grow-1">Up to 30 Project Integrations</span>
+                                            <span class="fw-semibold fs-5 text-gray-700 flex-grow-1">Отслеживание 10 компаний</span>
                                             <!--begin::Svg Icon | path: icons/duotune/general/gen043.svg-->
                                             <span class="svg-icon svg-icon-1 svg-icon-success">
 														<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -487,7 +492,7 @@
                                         <!--end::Item-->
                                         <!--begin::Item-->
                                         <div class="d-flex align-items-center mb-7">
-                                            <span class="fw-semibold fs-5 text-gray-700 flex-grow-1">Analytics Module</span>
+                                            <span class="fw-semibold fs-5 text-gray-700 flex-grow-1">История сделок контрагентов за все время</span>
                                             <!--begin::Svg Icon | path: icons/duotune/general/gen043.svg-->
                                             <span class="svg-icon svg-icon-1 svg-icon-success">
 														<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -500,8 +505,8 @@
                                         <!--end::Item-->
                                         <!--begin::Item-->
                                         <div class="d-flex align-items-center mb-7">
-                                            <span class="fw-semibold fs-5 text-gray-700 flex-grow-1">Finance Module</span>
-                                            <!--begin::Svg Icon | path: icons/duotune/general/gen043.svg-->
+                                            <span class="fw-semibold fs-5 text-gray-700 flex-grow-1">Доступ к документации и курсам</span>
+                                            <!--begin::Svg Icon | path: icons/duotune/general/gen040.svg-->
                                             <span class="svg-icon svg-icon-1 svg-icon-success">
 														<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 															<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="10" fill="currentColor"></rect>
@@ -513,8 +518,8 @@
                                         <!--end::Item-->
                                         <!--begin::Item-->
                                         <div class="d-flex align-items-center mb-7">
-                                            <span class="fw-semibold fs-5 text-gray-700 flex-grow-1">Accounting Module</span>
-                                            <!--begin::Svg Icon | path: icons/duotune/general/gen043.svg-->
+                                            <span class="fw-semibold fs-5 text-gray-700 flex-grow-1">Онлайн поддержка</span>
+                                            <!--begin::Svg Icon | path: icons/duotune/general/gen040.svg-->
                                             <span class="svg-icon svg-icon-1 svg-icon-success">
 														<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 															<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="10" fill="currentColor"></rect>
@@ -526,7 +531,7 @@
                                         <!--end::Item-->
                                         <!--begin::Item-->
                                         <div class="d-flex align-items-center mb-7">
-                                            <span class="fw-semibold fs-5 text-muted flex-grow-1">Network Platform</span>
+                                            <span class="fw-semibold fs-5 text-muted flex-grow-1">Поддержка 24/7</span>
                                             <!--begin::Svg Icon | path: icons/duotune/general/gen040.svg-->
                                             <span class="svg-icon svg-icon-1">
 														<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -540,7 +545,7 @@
                                         <!--end::Item-->
                                         <!--begin::Item-->
                                         <div class="d-flex align-items-center">
-                                            <span class="fw-semibold fs-5 text-muted flex-grow-1">Unlimited Cloud Space</span>
+                                            <span class="fw-semibold fs-5 text-muted flex-grow-1">Введение ВЭД</span>
                                             <!--begin::Svg Icon | path: icons/duotune/general/gen040.svg-->
                                             <span class="svg-icon svg-icon-1">
 														<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
