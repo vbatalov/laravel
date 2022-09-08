@@ -13,11 +13,9 @@ class DealsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(UsersDataTable $dataTable)
     {
-        $users = DB::select('select * from users');
-
-        return view('pages.deals.index', ['users' => $users]);
+        return $dataTable->render('pages.deals.index');
     }
 
     /**
