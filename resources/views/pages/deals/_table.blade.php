@@ -1,5 +1,8 @@
+<!--begin::Table-->
+{{ $dataTable->table() }}
+<!--end::Table-->
 
-
-    @foreach ($users as $user)
-        <li>{{ $user->id }}</li>
-    @endforeach
+{{-- Inject Scripts --}}
+@section('scripts')
+    {{ $dataTable->scripts() }}
+@endsection

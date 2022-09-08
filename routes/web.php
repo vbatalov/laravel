@@ -71,7 +71,8 @@ Route::middleware('auth')->group(function () {
 
 // Сделки с древесиной
 Route::middleware('auth')->group(function () {
-    Route::get('/deals', [DealsController::class, 'index']);
+//    Route::get('/deals', [DealsController::class, 'index']);
+    Route::resource('deals', DealsController::class)->only(['index']);
 });
 
 Route::resource('users', UsersController::class);

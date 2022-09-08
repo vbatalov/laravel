@@ -46,17 +46,24 @@ class DealsDataTable extends DataTable
                     ->setTableId('deals-table')
                     ->columns($this->getColumns())
                     ->minifiedAjax()
-                    ->dom('Bfrtip')
-                    ->orderBy(1)
-                    ->buttons(
-                        Button::make('create'),
-                        Button::make('export'),
-                        Button::make('print'),
-                        Button::make('reset'),
-                        Button::make('reload')
-                    );
+                    ->stateSave(true)
+                    ->orderBy(6)
+                    ->responsive()
+                    ->autoWidth(false)
+                    ->parameters([
+                        'scrollX'      => true,
+                        'drawCallback' => 'function() { KTMenu.createInstances(); }',
+                    ])
+                    ->addTableClass('align-middle table-row-dashed fs-6 gy-5');
     }
-
+                    //Вырезал из return $this->builder()
+                    //->buttons(
+                    //Button::make('create'),
+                    //Button::make('export'),
+                    //Button::make('print'),
+                    //Button::make('reset'),
+                    //Button::make('reload')
+                    //)
     /**
      * Get columns.
      *
@@ -65,15 +72,14 @@ class DealsDataTable extends DataTable
     protected function getColumns()
     {
         return [
-            Column::computed('action')
-                  ->exportable(false)
-                  ->printable(false)
-                  ->width(60)
-                  ->addClass('text-center'),
-            Column::make('id'),
-            Column::make('add your columns'),
-            Column::make('created_at'),
-            Column::make('updated_at'),
+            Column::make('sellerName')->title(__('Продавец'))->addClass('ps-0'),
+            Column::make('sellerInn')->title(__('ИНН')),
+            Column::make('buyerName')->title(__('Покупатель')),
+            Column::make('buyerInn')->title(__('ИНН')),
+            Column::make('dealDate')->title(__('Дата'))->addClass('none'),
+            Column::make('woodVolumeBuyer')->title(__('Объем, покупатель:'))->addClass('none'),
+            Column::make('woodVolumeSeller')->title(__('Объем, продавец:'))->addClass('none'),
+            Column::make('dealNumber')->title('Номер сделки')->addClass('none'),
         ];
     }
 

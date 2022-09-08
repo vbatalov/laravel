@@ -104,6 +104,20 @@ return array(
         ),
     ),
 
+    'deals' => array(
+            'title'  => 'Сделки с древесиной',
+            'assets' => array(
+                'custom' => array(
+                    'css' => array(
+                        'plugins/custom/datatables/datatables.bundle.css',
+                    ),
+                    'js'  => array(
+                        'plugins/custom/datatables/datatables.bundle.js',
+                    ),
+                ),
+            ),
+        ),
+
     'error' => array(
         'error-404' => array(
             'title' => 'Error 404',
