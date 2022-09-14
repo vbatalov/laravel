@@ -270,7 +270,7 @@ return array(
 
         // ЛесЕГАИС
         array(
-            'title'      => 'Возможности',
+            'title'      => 'ЛесЕГАИС',
             'icon'       => array(
                 'svg'  => theme()->getSvgIcon("demo1/media/icons/duotune/communication/com006.svg", "svg-icon-2"),
                 'font' => '<i class="bi bi-person fs-2"></i>',
@@ -283,12 +283,12 @@ return array(
                 'class' => 'menu-sub-accordion menu-active-bg',
                 'items' => array(
                     array(
-                        'title'  => 'Мои компании',
-                        'path'   => 'deals/overview',
+                        'title'  => 'Сделки с древесиной',
+                        'path'   => 'deals',
                         'bullet' => '<span class="bullet bullet-dot"></span>',
                         'attributes' => array(
                             'link' => array(
-                                "title"             => "Компании, которые Вы отслеживаете",
+                                "title"             => "Все сделки в одном месте",
                                 "data-bs-toggle"    => "tooltip",
                                 "data-bs-trigger"   => "hover",
                                 "data-bs-dismiss"   => "click",

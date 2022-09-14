@@ -39,7 +39,7 @@
         <!--end::Login options-->
         <!--begin::Separator-->
         <div class="separator separator-content my-14">
-            <span class="w-340px text-gray-500 fw-semibold fs-7">Или используйте Email и пароль</span>
+            <span class="w-400px text-gray-500 fw-semibold fs-7">Или укажите Email и пароль</span>
         </div>
         <!--end::Separator-->
         <!--begin::Input group=-->

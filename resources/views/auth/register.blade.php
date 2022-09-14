@@ -37,7 +37,7 @@
         <!--end::Login options-->
         <!--begin::Separator-->
         <div class="separator separator-content my-14">
-            <span class="w-165px text-gray-500 fw-semibold fs-7">Или через Email</span>
+            <span class="w-425px text-gray-500 fw-semibold fs-7">Или используйте Email и пароль</span>
         </div>
         <!--end::Separator-->
 

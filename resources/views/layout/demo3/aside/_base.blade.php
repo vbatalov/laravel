@@ -36,7 +36,7 @@
             <div class="d-flex align-items-center">
                 <!--begin::Avatar-->
                 <div class="symbol symbol-circle symbol-40px">
-                    <img src="{{ asset(theme()->getMediaUrlPath() . 'avatars/300-1.jpg') }}" alt="photo"/>
+                    <img src="{{ auth()->user()->avatar_url }}" alt="photo"/>
                 </div>
                 <!--end::Avatar-->
 
@@ -47,7 +47,7 @@
                     <!--end::Name-->
 
                     <!--begin::Major-->
-                    <span class="text-muted fw-bold d-block fs-7 lh-1">Python Dev</span>
+                    <span class="text-muted fw-bold d-block fs-7 lh-1">{{ auth()->user()->email }}</span>
                     <!--end::Major-->
                 </div>
                 <!--end::User info-->

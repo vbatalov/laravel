@@ -75,6 +75,10 @@ Route::middleware('auth')->group(function () {
     Route::resource('deals', DealsController::class)->only(['index']);
 });
 
+//    dont work FCK!
+    Route::get('profile/activity', [PagesController::class, 'index']);
+
+
 Route::resource('users', UsersController::class);
 
 /**

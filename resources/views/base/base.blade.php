@@ -12,9 +12,12 @@ License: {{ theme()->getOption('product', 'license') }}
 --}}
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}"{!! theme()->printHtmlAttributes('html') !!} {{ theme()->printHtmlClasses('html') }}>
 {{-- begin::Head --}}
+@section('title-comment')
+    Главная
+@endsection
 <head>
     <meta charset="utf-8"/>
-    <title>{{ ucfirst(theme()->getOption('meta', 'title')) }}</title>
+    <title>{{ ucfirst(theme()->getOption('meta', 'title')) }} | @yield('title-comment') </title>
     <meta name="description" content="{{ ucfirst(theme()->getOption('meta', 'description')) }}"/>
     <meta name="keywords" content="{{ theme()->getOption('meta', 'keywords') }}"/>
     <link rel="canonical" href="{{ ucfirst(theme()->getOption('meta', 'canonical')) }}"/>

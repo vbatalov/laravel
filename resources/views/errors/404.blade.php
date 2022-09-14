@@ -1,3 +1,7 @@
+@section('title-comment')
+    Ошибка 404
+@endsection
+
 <x-error-layout>
 
     <!--begin::Wrapper-->
