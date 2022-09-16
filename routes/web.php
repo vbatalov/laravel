@@ -12,6 +12,8 @@ use Illuminate\Support\Facades\Route;
 
 // Сделки с древесиной
 use App\Http\Controllers\DealsController;
+// Companies
+use App\Http\Controllers\CompaniesController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -75,8 +77,14 @@ Route::middleware('auth')->group(function () {
     Route::resource('deals', DealsController::class)->only(['index']);
 });
 
-//    dont work FCK!
-    Route::get('profile/activity', [PagesController::class, 'index']);
+// Companies
+Route::middleware('auth')->group(function () {
+   Route::prefix('companies')->name('companies')->group(function() {
+       Route::resource('/', CompaniesController::class);
+       Route::get('{inn}', [CompaniesController::class, 'show']);
+   });
+});
+
 
 
 Route::resource('users', UsersController::class);

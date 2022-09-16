@@ -117,6 +117,19 @@ return array(
                 ),
             ),
         ),
+    'companies' => array(
+        'title'  => 'Компании',
+        'assets' => array(
+            'custom' => array(
+                'css' => array(
+                    'plugins/custom/datatables/datatables.bundle.css',
+                ),
+                'js'  => array(
+                    'plugins/custom/datatables/datatables.bundle.js',
+                ),
+            ),
+        ),
+    ),
 
     'error' => array(
         'error-404' => array(
