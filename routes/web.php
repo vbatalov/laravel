@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 // Сделки с древесиной
 use App\Http\Controllers\DealsController;
 // Companies
-use App\Http\Controllers\CompaniesController;
+use App\Http\Controllers\CompaniesRuController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -80,8 +80,8 @@ Route::middleware('auth')->group(function () {
 // Companies
 Route::middleware('auth')->group(function () {
    Route::prefix('companies')->name('companies')->group(function() {
-       Route::resource('/', CompaniesController::class);
-       Route::get('{inn}', [CompaniesController::class, 'show']);
+       Route::resource('/', CompaniesRuController::class);
+       Route::get('{inn}', [CompaniesRuController::class, 'overview']);
    });
 });
 
