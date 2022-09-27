@@ -218,10 +218,19 @@
                                 <!--end::Table-->
                             </div>
                             <!--end::Table container-->
+
                         </div>
                         <!--end::Body-->
                     </div>
                     <!--end::Tables Widget 2-->
+
+                    <!--begin::Tables Widget 3 ОКВЭД-->
+                    @include('pages.companies.info.ru.widgets.okved')
+                    <!--end::Tables Widget 3 ОКВЭД -->
+
+                    <!--begin::Tables Widget 4 ФИНАНСЫ -->
+                    @include('pages.companies.info.ru.widgets.fin')
+                    <!--end::Tables Widget 4 ФИНАНСЫ -->
                 </div>
                 <div class="tab-pane fade" id="kt_general_widget_1_2" role="tabpanel">
                     <!--begin::Tables Widget 3-->
@@ -254,6 +263,9 @@
                                     <!--begin::Table body-->
                                     <tbody>
                                     <tr>
+                                        @if(isset($okved_main))
+
+
                                         @php
                                             $atr = $okved_main['@attributes'];
                                             $main_name = $atr['НаимОКВЭД'];
@@ -334,6 +346,7 @@
 
                                         @endif
                                     @endforeach
+
                                     <tr>
                                         <td colspan="5" class="text-center">
                                             <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#allOkved" aria-expanded="false" aria-controls="allOkved">
@@ -341,6 +354,7 @@
                                             </button>
                                         </td>
                                     </tr>
+                                    @endif
                                     </tbody>
                                     <!--end::Table body-->
                                 </table>
@@ -1347,230 +1361,25 @@
             <!--end::Tab content-->
         </div>
         <!--end::General Widget 1-->
-        <!--begin::Charts Widget 1-->
-        <div class="card mb-10">
-            <!--begin::Header-->
-            <div class="card-header border-0 pt-5">
-                <!--begin::Title-->
-                <h3 class="card-title align-items-start flex-column">
-                    <span class="card-label fw-bold fs-3 mb-1">Recent Statistics</span>
-                    <span class="text-muted fw-semibold fs-7">More than 400 new members</span>
-                </h3>
-                <!--end::Title-->
-                <!--begin::Toolbar-->
-                <div class="card-toolbar">
-                    <!--begin::Menu-->
-                    <button type="button" class="btn btn-sm btn-icon btn-color-primary btn-active-light-primary" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
-                        <!--begin::Svg Icon | path: icons/duotune/general/gen024.svg-->
-                        <span class="svg-icon svg-icon-2">
-														<svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24">
-															<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-																<rect x="5" y="5" width="5" height="5" rx="1" fill="currentColor"></rect>
-																<rect x="14" y="5" width="5" height="5" rx="1" fill="currentColor" opacity="0.3"></rect>
-																<rect x="5" y="14" width="5" height="5" rx="1" fill="currentColor" opacity="0.3"></rect>
-																<rect x="14" y="14" width="5" height="5" rx="1" fill="currentColor" opacity="0.3"></rect>
-															</g>
-														</svg>
-													</span>
-                        <!--end::Svg Icon-->
-                    </button>
-                    <!--begin::Menu 1-->
-                    <div class="menu menu-sub menu-sub-dropdown w-250px w-md-300px" data-kt-menu="true" id="kt_menu_62cfab8e7a216">
-                        <!--begin::Header-->
-                        <div class="px-7 py-5">
-                            <div class="fs-5 text-dark fw-bold">Filter Options</div>
-                        </div>
-                        <!--end::Header-->
-                        <!--begin::Menu separator-->
-                        <div class="separator border-gray-200"></div>
-                        <!--end::Menu separator-->
-                        <!--begin::Form-->
-                        <div class="px-7 py-5">
-                            <!--begin::Input group-->
-                            <div class="mb-10">
-                                <!--begin::Label-->
-                                <label class="form-label fw-semibold">Status:</label>
-                                <!--end::Label-->
-                                <!--begin::Input-->
-                                <div>
-                                    <select class="form-select form-select-solid select2-hidden-accessible" data-kt-select2="true" data-placeholder="Select option" data-dropdown-parent="#kt_menu_62cfab8e7a216" data-allow-clear="true" data-select2-id="select2-data-16-1aw9" tabindex="-1" aria-hidden="true" data-kt-initialized="1">
-                                        <option data-select2-id="select2-data-18-5fhh"></option>
-                                        <option value="1">Approved</option>
-                                        <option value="2">Pending</option>
-                                        <option value="2">In Process</option>
-                                        <option value="2">Rejected</option>
-                                    </select><span class="select2 select2-container select2-container--bootstrap5" dir="ltr" data-select2-id="select2-data-17-c094" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single form-select form-select-solid" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-e0eo-container" aria-controls="select2-e0eo-container"><span class="select2-selection__rendered" id="select2-e0eo-container" role="textbox" aria-readonly="true" title="Select option"><span class="select2-selection__placeholder">Select option</span></span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
-                                </div>
-                                <!--end::Input-->
-                            </div>
-                            <!--end::Input group-->
-                            <!--begin::Input group-->
-                            <div class="mb-10">
-                                <!--begin::Label-->
-                                <label class="form-label fw-semibold">Member Type:</label>
-                                <!--end::Label-->
-                                <!--begin::Options-->
-                                <div class="d-flex">
-                                    <!--begin::Options-->
-                                    <label class="form-check form-check-sm form-check-custom form-check-solid me-5">
-                                        <input class="form-check-input" type="checkbox" value="1">
-                                        <span class="form-check-label">Author</span>
-                                    </label>
-                                    <!--end::Options-->
-                                    <!--begin::Options-->
-                                    <label class="form-check form-check-sm form-check-custom form-check-solid">
-                                        <input class="form-check-input" type="checkbox" value="2" checked="checked">
-                                        <span class="form-check-label">Customer</span>
-                                    </label>
-                                    <!--end::Options-->
-                                </div>
-                                <!--end::Options-->
-                            </div>
-                            <!--end::Input group-->
-                            <!--begin::Input group-->
-                            <div class="mb-10">
-                                <!--begin::Label-->
-                                <label class="form-label fw-semibold">Notifications:</label>
-                                <!--end::Label-->
-                                <!--begin::Switch-->
-                                <div class="form-check form-switch form-switch-sm form-check-custom form-check-solid">
-                                    <input class="form-check-input" type="checkbox" value="" name="notifications" checked="checked">
-                                    <label class="form-check-label">Enabled</label>
-                                </div>
-                                <!--end::Switch-->
-                            </div>
-                            <!--end::Input group-->
-                            <!--begin::Actions-->
-                            <div class="d-flex justify-content-end">
-                                <button type="reset" class="btn btn-sm btn-light btn-active-light-primary me-2" data-kt-menu-dismiss="true">Reset</button>
-                                <button type="submit" class="btn btn-sm btn-primary" data-kt-menu-dismiss="true">Apply</button>
-                            </div>
-                            <!--end::Actions-->
-                        </div>
-                        <!--end::Form-->
-                    </div>
-                    <!--end::Menu 1-->
-                    <!--end::Menu-->
-                </div>
-                <!--end::Toolbar-->
-            </div>
-            <!--end::Header-->
-            <!--begin::Body-->
-            <div class="card-body">
-                <!--begin::Chart-->
-                <div id="kt_charts_widget_1_chart" style="height: 350px; min-height: 365px;">
-                </div>
-                <!--end::Chart-->
-            </div>
-            <!--end::Body-->
-        </div>
-        <!--end::Charts Widget 1-->
+
     </div>
     <!--end::Col-->
     <!--begin::Col-->
     <div class="col-xl-4">
+        <!--begin::List Widget 5 ОКВЭД -->
+        @include('pages.companies.info.ru.widgets.okved')
+        <!--end: List Widget 5 ОКВЭД -->
         <!--begin::List Widget 5-->
-        <div class="card mb-10">
+        <div class="card mb-10 ">
             <!--begin::Header-->
             <div class="card-header align-items-center border-0 mt-4">
                 <h3 class="card-title align-items-start flex-column">
-                    <span class="fw-bold mb-2 text-dark">Activities</span>
-                    <span class="text-muted fw-semibold fs-7">890,344 Sales</span>
+                    <span class="fw-bold mb-2 text-dark">Записи ЕГР</span>
+                    @php
+                        $countEgr = count($changes);
+                    @endphp
+                    <span class="text-muted fw-semibold fs-7">{{ $countEgr }} записей</span>
                 </h3>
-                <div class="card-toolbar">
-                    <!--begin::Menu-->
-                    <button type="button" class="btn btn-sm btn-icon btn-color-primary btn-active-light-primary" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
-                        <!--begin::Svg Icon | path: icons/duotune/general/gen024.svg-->
-                        <span class="svg-icon svg-icon-2">
-														<svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24">
-															<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-																<rect x="5" y="5" width="5" height="5" rx="1" fill="currentColor"></rect>
-																<rect x="14" y="5" width="5" height="5" rx="1" fill="currentColor" opacity="0.3"></rect>
-																<rect x="5" y="14" width="5" height="5" rx="1" fill="currentColor" opacity="0.3"></rect>
-																<rect x="14" y="14" width="5" height="5" rx="1" fill="currentColor" opacity="0.3"></rect>
-															</g>
-														</svg>
-													</span>
-                        <!--end::Svg Icon-->
-                    </button>
-                    <!--begin::Menu 1-->
-                    <div class="menu menu-sub menu-sub-dropdown w-250px w-md-300px" data-kt-menu="true" id="kt_menu_62cfab8e7a5ae">
-                        <!--begin::Header-->
-                        <div class="px-7 py-5">
-                            <div class="fs-5 text-dark fw-bold">Filter Options</div>
-                        </div>
-                        <!--end::Header-->
-                        <!--begin::Menu separator-->
-                        <div class="separator border-gray-200"></div>
-                        <!--end::Menu separator-->
-                        <!--begin::Form-->
-                        <div class="px-7 py-5">
-                            <!--begin::Input group-->
-                            <div class="mb-10">
-                                <!--begin::Label-->
-                                <label class="form-label fw-semibold">Status:</label>
-                                <!--end::Label-->
-                                <!--begin::Input-->
-                                <div>
-                                    <select class="form-select form-select-solid select2-hidden-accessible" data-kt-select2="true" data-placeholder="Select option" data-dropdown-parent="#kt_menu_62cfab8e7a5ae" data-allow-clear="true" data-select2-id="select2-data-19-pyda" tabindex="-1" aria-hidden="true" data-kt-initialized="1">
-                                        <option data-select2-id="select2-data-21-qjid"></option>
-                                        <option value="1">Approved</option>
-                                        <option value="2">Pending</option>
-                                        <option value="2">In Process</option>
-                                        <option value="2">Rejected</option>
-                                    </select><span class="select2 select2-container select2-container--bootstrap5" dir="ltr" data-select2-id="select2-data-20-sfc3" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single form-select form-select-solid" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-m0ht-container" aria-controls="select2-m0ht-container"><span class="select2-selection__rendered" id="select2-m0ht-container" role="textbox" aria-readonly="true" title="Select option"><span class="select2-selection__placeholder">Select option</span></span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
-                                </div>
-                                <!--end::Input-->
-                            </div>
-                            <!--end::Input group-->
-                            <!--begin::Input group-->
-                            <div class="mb-10">
-                                <!--begin::Label-->
-                                <label class="form-label fw-semibold">Member Type:</label>
-                                <!--end::Label-->
-                                <!--begin::Options-->
-                                <div class="d-flex">
-                                    <!--begin::Options-->
-                                    <label class="form-check form-check-sm form-check-custom form-check-solid me-5">
-                                        <input class="form-check-input" type="checkbox" value="1">
-                                        <span class="form-check-label">Author</span>
-                                    </label>
-                                    <!--end::Options-->
-                                    <!--begin::Options-->
-                                    <label class="form-check form-check-sm form-check-custom form-check-solid">
-                                        <input class="form-check-input" type="checkbox" value="2" checked="checked">
-                                        <span class="form-check-label">Customer</span>
-                                    </label>
-                                    <!--end::Options-->
-                                </div>
-                                <!--end::Options-->
-                            </div>
-                            <!--end::Input group-->
-                            <!--begin::Input group-->
-                            <div class="mb-10">
-                                <!--begin::Label-->
-                                <label class="form-label fw-semibold">Notifications:</label>
-                                <!--end::Label-->
-                                <!--begin::Switch-->
-                                <div class="form-check form-switch form-switch-sm form-check-custom form-check-solid">
-                                    <input class="form-check-input" type="checkbox" value="" name="notifications" checked="checked">
-                                    <label class="form-check-label">Enabled</label>
-                                </div>
-                                <!--end::Switch-->
-                            </div>
-                            <!--end::Input group-->
-                            <!--begin::Actions-->
-                            <div class="d-flex justify-content-end">
-                                <button type="reset" class="btn btn-sm btn-light btn-active-light-primary me-2" data-kt-menu-dismiss="true">Reset</button>
-                                <button type="submit" class="btn btn-sm btn-primary" data-kt-menu-dismiss="true">Apply</button>
-                            </div>
-                            <!--end::Actions-->
-                        </div>
-                        <!--end::Form-->
-                    </div>
-                    <!--end::Menu 1-->
-                    <!--end::Menu-->
-                </div>
             </div>
             <!--end::Header-->
             <!--begin::Body-->
@@ -1578,129 +1387,22 @@
                 <!--begin::Timeline-->
                 <div class="timeline-label">
                     <!--begin::Item-->
-                    <div class="timeline-item">
-                        <!--begin::Label-->
-                        <div class="timeline-label fw-bold text-gray-800 fs-6">08:42</div>
-                        <!--end::Label-->
-                        <!--begin::Badge-->
-                        <div class="timeline-badge">
-                            <i class="fa fa-genderless text-warning fs-1"></i>
+
+                    @foreach($changes as $key => $value)
+                        <div class="timeline-item">
+                            <!--begin::Label-->
+                            <div class="timeline-label fw-bold text-gray-800 fs-6">{{ $value['date'] }}</div>
+                            <!--end::Label-->
+                            <!--begin::Badge-->
+                            <div class="timeline-badge pulse">
+                                <i class="fa fa-genderless text-warning fs-1"></i>
+                            </div>
+                            <!--end::Badge-->
+                            <!--begin::Text-->
+                            <div class="fw-mormal timeline-content text-muted ps-3">{{ $value['nameChanges'] }}</div>
+                            <!--end::Text-->
                         </div>
-                        <!--end::Badge-->
-                        <!--begin::Text-->
-                        <div class="fw-mormal timeline-content text-muted ps-3">Outlines keep you honest. And keep structure</div>
-                        <!--end::Text-->
-                    </div>
-                    <!--end::Item-->
-                    <!--begin::Item-->
-                    <div class="timeline-item">
-                        <!--begin::Label-->
-                        <div class="timeline-label fw-bold text-gray-800 fs-6">10:00</div>
-                        <!--end::Label-->
-                        <!--begin::Badge-->
-                        <div class="timeline-badge">
-                            <i class="fa fa-genderless text-success fs-1"></i>
-                        </div>
-                        <!--end::Badge-->
-                        <!--begin::Content-->
-                        <div class="timeline-content d-flex">
-                            <span class="fw-bold text-gray-800 ps-3">AEOL meeting</span>
-                        </div>
-                        <!--end::Content-->
-                    </div>
-                    <!--end::Item-->
-                    <!--begin::Item-->
-                    <div class="timeline-item">
-                        <!--begin::Label-->
-                        <div class="timeline-label fw-bold text-gray-800 fs-6">14:37</div>
-                        <!--end::Label-->
-                        <!--begin::Badge-->
-                        <div class="timeline-badge">
-                            <i class="fa fa-genderless text-danger fs-1"></i>
-                        </div>
-                        <!--end::Badge-->
-                        <!--begin::Desc-->
-                        <div class="timeline-content fw-bold text-gray-800 ps-3">Make deposit
-                            <a href="#" class="text-primary">USD 700</a>. to ESL</div>
-                        <!--end::Desc-->
-                    </div>
-                    <!--end::Item-->
-                    <!--begin::Item-->
-                    <div class="timeline-item">
-                        <!--begin::Label-->
-                        <div class="timeline-label fw-bold text-gray-800 fs-6">16:50</div>
-                        <!--end::Label-->
-                        <!--begin::Badge-->
-                        <div class="timeline-badge">
-                            <i class="fa fa-genderless text-primary fs-1"></i>
-                        </div>
-                        <!--end::Badge-->
-                        <!--begin::Text-->
-                        <div class="timeline-content fw-mormal text-muted ps-3">Indulging in poorly driving and keep structure keep great</div>
-                        <!--end::Text-->
-                    </div>
-                    <!--end::Item-->
-                    <!--begin::Item-->
-                    <div class="timeline-item">
-                        <!--begin::Label-->
-                        <div class="timeline-label fw-bold text-gray-800 fs-6">21:03</div>
-                        <!--end::Label-->
-                        <!--begin::Badge-->
-                        <div class="timeline-badge">
-                            <i class="fa fa-genderless text-danger fs-1"></i>
-                        </div>
-                        <!--end::Badge-->
-                        <!--begin::Desc-->
-                        <div class="timeline-content fw-semibold text-gray-800 ps-3">New order placed
-                            <a href="#" class="text-primary">#XF-2356</a>.</div>
-                        <!--end::Desc-->
-                    </div>
-                    <!--end::Item-->
-                    <!--begin::Item-->
-                    <div class="timeline-item">
-                        <!--begin::Label-->
-                        <div class="timeline-label fw-bold text-gray-800 fs-6">16:50</div>
-                        <!--end::Label-->
-                        <!--begin::Badge-->
-                        <div class="timeline-badge">
-                            <i class="fa fa-genderless text-primary fs-1"></i>
-                        </div>
-                        <!--end::Badge-->
-                        <!--begin::Text-->
-                        <div class="timeline-content fw-mormal text-muted ps-3">Indulging in poorly driving and keep structure keep great</div>
-                        <!--end::Text-->
-                    </div>
-                    <!--end::Item-->
-                    <!--begin::Item-->
-                    <div class="timeline-item">
-                        <!--begin::Label-->
-                        <div class="timeline-label fw-bold text-gray-800 fs-6">21:03</div>
-                        <!--end::Label-->
-                        <!--begin::Badge-->
-                        <div class="timeline-badge">
-                            <i class="fa fa-genderless text-danger fs-1"></i>
-                        </div>
-                        <!--end::Badge-->
-                        <!--begin::Desc-->
-                        <div class="timeline-content fw-semibold text-gray-800 ps-3">New order placed
-                            <a href="#" class="text-primary">#XF-2356</a>.</div>
-                        <!--end::Desc-->
-                    </div>
-                    <!--end::Item-->
-                    <!--begin::Item-->
-                    <div class="timeline-item mb-9">
-                        <!--begin::Label-->
-                        <div class="timeline-label fw-bold text-gray-800 fs-6">10:30</div>
-                        <!--end::Label-->
-                        <!--begin::Badge-->
-                        <div class="timeline-badge">
-                            <i class="fa fa-genderless text-success fs-1"></i>
-                        </div>
-                        <!--end::Badge-->
-                        <!--begin::Text-->
-                        <div class="timeline-content fw-mormal text-muted ps-3">Finance KPI Mobile app launch preparion meeting</div>
-                        <!--end::Text-->
-                    </div>
+                    @endforeach
                     <!--end::Item-->
                 </div>
                 <!--end::Timeline-->
@@ -1708,6 +1410,7 @@
             <!--end: Card Body-->
         </div>
         <!--end: List Widget 5-->
+
         <!--begin::List Widget 4-->
         <div class="card">
             <!--begin::Header-->
@@ -1938,6 +1641,7 @@
             <!--end::Body-->
         </div>
         <!--end::List Widget 4-->
+
     </div>
     <!--end::Col-->
 </div>
