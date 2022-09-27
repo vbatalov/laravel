@@ -10,15 +10,6 @@ use Illuminate\Http\Request;
 class CompaniesRuController extends Controller
 {
 
-    protected $fillable = [
-        'name',
-        'type',
-        'management_name',
-        'management_post',
-        'inn',
-    ];
-
-
     /**
      * Display a listing of the resource.
      *

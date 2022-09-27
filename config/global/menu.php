@@ -270,7 +270,7 @@ return array(
 
         // ЛесЕГАИС
         array(
-            'title'      => 'Возможности',
+            'title'      => 'ЕГАИС Лес',
             'icon'       => array(
                 'svg'  => theme()->getSvgIcon("demo1/media/icons/duotune/communication/com006.svg", "svg-icon-2"),
                 'font' => '<i class="bi bi-person fs-2"></i>',
@@ -288,7 +288,7 @@ return array(
                         'bullet' => '<span class="bullet bullet-dot"></span>',
                         'attributes' => array(
                             'link' => array(
-                                "title"             => "Вся информация о компании",
+                                "title"             => "Информация о компаниях со всего мира",
                                 "data-bs-toggle"    => "tooltip",
                                 "data-bs-trigger"   => "hover",
                                 "data-bs-dismiss"   => "click",
@@ -296,27 +296,14 @@ return array(
                             ),
                         ),
                     ),
+
                     array(
-                        'title'  => 'Сделки с древесиной',
-                        'path'   => 'deals',
-                        'bullet' => '<span class="bullet bullet-dot"></span>',
-                        'attributes' => array(
-                            'link' => array(
-                                "title"             => "Все сделки в одном месте",
-                                "data-bs-toggle"    => "tooltip",
-                                "data-bs-trigger"   => "hover",
-                                "data-bs-dismiss"   => "click",
-                                "data-bs-placement" => "right",
-                            ),
-                        ),
-                    ),
-                    array(
-                        'title'  => 'Уведомления',
+                        'title'  => 'Отследить сделки с древесиной',
                         'path'   => 'deals/settings',
                         'bullet' => '<span class="bullet bullet-dot"></span>',
                         'attributes' => array(
                             'link' => array(
-                                "title"             => "Настройте уведомления о сделках",
+                                "title"             => "Отследите изменение отчетов и регистрацию новых сделок",
                                 "data-bs-toggle"    => "tooltip",
                                 "data-bs-trigger"   => "hover",
                                 "data-bs-dismiss"   => "click",
@@ -326,6 +313,12 @@ return array(
                     ),
                 ),
             ),
+        ),
+
+        array(
+            'title' => 'Специалисты',
+            'icon'  => theme()->getSvgIcon("demo1/media/icons/duotune/abstract/abs027.svg", "svg-icon-2"),
+            'path'  => 'specialist/',
         ),
 
         // System

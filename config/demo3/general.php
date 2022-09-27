@@ -52,7 +52,7 @@ return array(
         // Page title
         'page-title' => array(
             'display'               => true, // Display page title
-            'breadcrumb'            => true, // Display breadcrumb
+            'breadcrumb'            => false, // Display breadcrumb
             'description'           => false, // Display description
             'responsive'            => true, // Move page title to cotnent on mobile mode
             'responsive-breakpoint' => 'lg', // Responsive breakpoint value(e.g: md, lg, or 300px)
@@ -66,7 +66,7 @@ return array(
 
         // Sidebar
         'sidebar'    => array(
-            'display' => true,
+            'display' => false,
         ),
 
         // Content

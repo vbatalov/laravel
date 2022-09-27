@@ -14,6 +14,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DealsController;
 // Companies
 use App\Http\Controllers\CompaniesRuController;
+//Specialist
+use App\Http\Controllers\Specialist;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -69,23 +72,23 @@ Route::middleware('auth')->group(function () {
         Route::resource('system', SystemLogsController::class)->only(['index', 'destroy']);
         Route::resource('audit', AuditLogsController::class)->only(['index', 'destroy']);
     });
-});
 
-// Сделки с древесиной
-Route::middleware('auth')->group(function () {
-//    Route::get('/deals', [DealsController::class, 'index']);
+    // Сделки с древесиной
+    //Route::get('/deals', [DealsController::class, 'index']);
     Route::resource('deals', DealsController::class)->only(['index']);
+
+    // Companies
+    Route::prefix('companies')->name('companies')->group(function() {
+        Route::resource('/', CompaniesRuController::class);
+        Route::get('{inn}', [CompaniesRuController::class, 'overview']);
+    });
+
+    // Специалисты
+    Route::prefix('specialist')->name('companies')->group(function() {
+        Route::resource('/', Specialist::class);
+        Route::get('{id}', [Specialist::class, 'overview']);
+    });
 });
-
-// Companies
-Route::middleware('auth')->group(function () {
-   Route::prefix('companies')->name('companies')->group(function() {
-       Route::resource('/', CompaniesRuController::class);
-       Route::get('{inn}', [CompaniesRuController::class, 'overview']);
-   });
-});
-
-
 
 Route::resource('users', UsersController::class);
 
