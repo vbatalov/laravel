@@ -1,7 +1,7 @@
 <x-base-layout>
     @include('pages.specialists._headerIndex')
     <!--begin::Card-->
-    <div class="card">
+    <div class="card" >
         <!--begin::Card body-->
         <div class="card-body pt-6">
             @include('pages.specialists._listIndex')

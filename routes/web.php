@@ -15,7 +15,7 @@ use App\Http\Controllers\DealsController;
 // Companies
 use App\Http\Controllers\CompaniesRuController;
 //Specialist
-use App\Http\Controllers\Specialist;
+use App\Http\Controllers\Specialists;
 
 /*
 |--------------------------------------------------------------------------
@@ -84,9 +84,9 @@ Route::middleware('auth')->group(function () {
     });
 
     // Специалисты
-    Route::prefix('specialist')->name('companies')->group(function() {
-        Route::resource('/', Specialist::class);
-        Route::get('{id}', [Specialist::class, 'overview']);
+    Route::prefix('specialist')->group(function() {
+        Route::get('/', [Specialists::class, 'index']);
+        //Route::get('{id}', [Specialists::class, 'overview']);
     });
 });
 
