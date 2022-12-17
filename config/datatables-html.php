@@ -22,12 +22,12 @@ return [
     'callback' => ['$', '$.', 'function'],
 
     /*
-     * Html builder script template.
+     * Html builder script demo3.
      */
     'script' => 'datatables::script',
 
     /*
-     * Html builder script template for DataTables Editor integration.
+     * Html builder script demo3 for DataTables Editor integration.
      */
     'editor' => 'datatables::editor',
 ];

@@ -26,7 +26,7 @@ var KTFormsDropzoneJSDemos = function () {
         const id = "#kt_dropzonejs_example_2";
         const dropzone = document.querySelector(id);
 
-        // set the preview element template
+        // set the preview element demo3
         var previewNode = dropzone.querySelector(".dropzone-item");
         previewNode.id = "";
         var previewTemplate = previewNode.parentNode.innerHTML;
@@ -118,7 +118,7 @@ var KTFormsDropzoneJSDemos = function () {
         const id = "#kt_dropzonejs_example_3";
         const dropzone = document.querySelector(id);
 
-        // set the preview element template
+        // set the preview element demo3
         var previewNode = dropzone.querySelector(".dropzone-item");
         previewNode.id = "";
         var previewTemplate = previewNode.parentNode.innerHTML;

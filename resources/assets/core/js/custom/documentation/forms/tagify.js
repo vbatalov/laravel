@@ -224,7 +224,7 @@ var KTFormsTagifyDemos = function () {
 
         // initialize Tagify on the above input node reference
         var tagify = new Tagify(inputElm, {
-            tagTextProp: 'name', // very important since a custom template is used with this property as text. allows typing a "value" or a "name" to match input with whitelist
+            tagTextProp: 'name', // very important since a custom demo3 is used with this property as text. allows typing a "value" or a "name" to match input with whitelist
             enforceWhitelist: true,
             skipInvalid: true, // do not remporarily add invalid tags
             dropdown: {
@@ -263,7 +263,7 @@ var KTFormsTagifyDemos = function () {
 
         // create a "add all" custom suggestion element every time the dropdown changes
         function getAddAllSuggestionsElm() {
-            // suggestions items should be based on "dropdownItem" template
+            // suggestions items should be based on "dropdownItem" demo3
             return tagify.parseTemplate('dropdownItem', [{
                 class: "addAll",
                 name: "Add all",

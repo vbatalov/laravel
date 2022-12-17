@@ -31,7 +31,7 @@ var KTJSTreeAjax = function() {
                 }
             },
             "state": {
-                "key": "demo3"
+                "key": "template"
             },
             "plugins": ["dnd", "state", "types"]
         });

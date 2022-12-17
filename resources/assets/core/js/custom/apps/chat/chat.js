@@ -31,22 +31,22 @@ var KTAppChat = function () {
             return;
         }
 
-		var messageOutTemplate = messages.querySelector('[data-kt-element="template-out"]');
-		var messageInTemplate = messages.querySelector('[data-kt-element="template-in"]');
+		var messageOutTemplate = messages.querySelector('[data-kt-element="demo3-out"]');
+		var messageInTemplate = messages.querySelector('[data-kt-element="demo3-in"]');
 		var message;
-		
+
 		// Show example outgoing message
 		message = messageOutTemplate.cloneNode(true);
 		message.classList.remove('d-none');
-		message.querySelector('[data-kt-element="message-text"]').innerText = input.value;		
+		message.querySelector('[data-kt-element="message-text"]').innerText = input.value;
 		input.value = '';
 		messages.appendChild(message);
 		messages.scrollTop = messages.scrollHeight;
-		
-		
-		setTimeout(function() {			
+
+
+		setTimeout(function() {
 			// Show example incoming message
-			message = messageInTemplate.cloneNode(true);			
+			message = messageInTemplate.cloneNode(true);
 			message.classList.remove('d-none');
 			message.querySelector('[data-kt-element="message-text"]').innerText = 'Thank you for your awesome support!';
 			messages.appendChild(message);

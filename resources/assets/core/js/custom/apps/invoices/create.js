@@ -28,7 +28,7 @@ var KTAppInvoicesCreate = function () {
 			price.value = format.to(priceValue);
 			quantity.value = quantityValue;
 
-			item.querySelector('[data-kt-element="total"]').innerText = format.to(priceValue * quantityValue);			
+			item.querySelector('[data-kt-element="total"]').innerText = format.to(priceValue * quantityValue);
 
 			grandTotal += priceValue * quantityValue;
 		});
@@ -39,7 +39,7 @@ var KTAppInvoicesCreate = function () {
 
 	var handleEmptyState = function() {
 		if (form.querySelectorAll('[data-kt-element="items"] [data-kt-element="item"]').length === 0) {
-			var item = form.querySelector('[data-kt-element="empty-template"] tr').cloneNode(true);
+			var item = form.querySelector('[data-kt-element="empty-demo3"] tr').cloneNode(true);
 			form.querySelector('[data-kt-element="items"] tbody').appendChild(item);
 		} else {
 			KTUtil.remove(form.querySelector('[data-kt-element="items"] [data-kt-element="empty"]'));
@@ -51,12 +51,12 @@ var KTAppInvoicesCreate = function () {
 		form.querySelector('[data-kt-element="items"] [data-kt-element="add-item"]').addEventListener('click', function(e) {
 			e.preventDefault();
 
-			var item = form.querySelector('[data-kt-element="item-template"] tr').cloneNode(true);
+			var item = form.querySelector('[data-kt-element="item-demo3"] tr').cloneNode(true);
 
 			form.querySelector('[data-kt-element="items"] tbody').appendChild(item);
 
 			handleEmptyState();
-			updateTotal();			
+			updateTotal();
 		});
 
 		// Remove item
@@ -66,14 +66,14 @@ var KTAppInvoicesCreate = function () {
 			KTUtil.remove(this.closest('[data-kt-element="item"]'));
 
 			handleEmptyState();
-			updateTotal();			
-		});		
+			updateTotal();
+		});
 
 		// Handle price and quantity changes
 		KTUtil.on(form, '[data-kt-element="items"] [data-kt-element="quantity"], [data-kt-element="items"] [data-kt-element="price"]', 'change', function(e) {
 			e.preventDefault();
 
-			updateTotal();			
+			updateTotal();
 		});
 	}
 

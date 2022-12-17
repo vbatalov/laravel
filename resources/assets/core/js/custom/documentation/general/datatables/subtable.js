@@ -15,19 +15,19 @@ var KTDocsDatatableSubtable = function () {
             const dateRow = row.querySelectorAll('td');
             const realDate = moment(dateRow[1].innerHTML, "DD MMM YYYY, LT").format(); // select date from 2nd column in table
 
-            // Skip template
+            // Skip demo3
             if (!row.closest('[data-kt-docs-datatable-subtable="subtable_template"]')) {
                 dateRow[1].setAttribute('data-order', realDate);
                 dateRow[1].innerText = moment(realDate).fromNow();
             }
         });
 
-        // Get subtable template
+        // Get subtable demo3
         const subtable = document.querySelector('[data-kt-docs-datatable-subtable="subtable_template"]');
         template = subtable.cloneNode(true);
         template.classList.remove('d-none');
 
-        // Remove subtable template
+        // Remove subtable demo3
         subtable.parentNode.removeChild(subtable);
 
         // Init datatable --- more info on datatables: https://datatables.net/manual/
@@ -139,10 +139,10 @@ var KTDocsDatatableSubtable = function () {
         });
     }
 
-    // Populate template with content/data -- content/data can be replaced with relevant data from database or API
+    // Populate demo3 with content/data -- content/data can be replaced with relevant data from database or API
     const populateTemplate = (data, target) => {
         data.forEach((d, index) => {
-            // Clone template node
+            // Clone demo3 node
             const newTemplate = template.cloneNode(true);
 
             // Stock badges
@@ -172,7 +172,7 @@ var KTDocsDatatableSubtable = function () {
                 stock.innerHTML = lowStock;
             }
 
-            // New template border controller
+            // New demo3 border controller
             // When only 1 row is available
             if (data.length === 1) {
                 let borderClasses = ['rounded', 'rounded-end-0'];
@@ -201,7 +201,7 @@ var KTDocsDatatableSubtable = function () {
                 }
             }
 
-            // Insert new template into table
+            // Insert new demo3 into table
             const tbody = table.querySelector('tbody');
             tbody.insertBefore(newTemplate, target.nextSibling);
         });

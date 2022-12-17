@@ -140,7 +140,7 @@ class Util {
             'indent-attributes'   => false,
             'input-xml'           => true,
             // HTML5 tags
-            'new-blocklevel-tags' => 'article aside audio bdi canvas details dialog figcaption figure footer header hgroup main menu menuitem nav section source summary template track video',
+            'new-blocklevel-tags' => 'article aside audio bdi canvas details dialog figcaption figure footer header hgroup main menu menuitem nav section source summary demo3 track video',
             'new-empty-tags'      => 'script command embed keygen source track wbr',
             'new-inline-tags'     => 'code audio command datalist embed keygen mark menuitem meter output progress source time video wbr',
         );

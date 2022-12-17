@@ -1,9 +1,9 @@
 <div class="col-12 row">
 
 @if(isset($info))
-    @foreach($info as $value)
+    @foreach($info as $key => $value)
         <!--begin::Card widget 1 -->
-        <div class="col-xxl-6 col-lg-12 card card-flush h-xl-100 ">
+        <div class="col-xxl-6 col-lg-12 card card-flush h-xl-100">
             <!--begin::Body-->
             <div class="card-body py-9">
                 <!--begin::Row-->
@@ -11,7 +11,7 @@
                     <!--begin::Col-->
                     <div class="col-sm-6 mb-10 mb-sm-0">
                         <!--begin::Image-->
-                        <div class="bgi-no-repeat bgi-position-center bgi-size-cover card-rounded min-h-400px min-h-sm-100 h-100" style="background-size: 100% 100%;background-image:url('../{{ $value['img'] }}')">
+                        <div class="bgi-no-repeat bgi-position-center bgi-size-cover card-rounded min-h-400px min-h-sm-100 h-100 " style="background-size: cover; background-image:url('../{{ $value['img'] }}')">
 
                         </div>
                         <!--end::Image-->
@@ -30,6 +30,7 @@
                                         <span class="text-gray-400 fs-7 fw-bold me-2 d-block lh-1 pb-1">ВЭД, ЕГАИС</span>
                                         <span class="text-gray-800 fs-1 fw-bold">{{ $value['name'] }}</span>
                                     </div>
+                                    @include('pages.specialists._rating')
                                     <!--end::Title-->
                                 </div>
                                 <!--end::Heading-->
@@ -44,26 +45,26 @@
                                         <!--end::Symbol-->
                                         <!--begin::Info-->
                                         <div class="m-0">
-                                            <span class="fw-semibold text-gray-400 d-block fs-8">Компания</span>
+                                            <span class="fw-semibold text-gray-400 d-block fs-8">Оказываю услугу</span>
                                             <span class="fw-bold text-gray-800 text-hover-primary fs-7">{{ $value['type'] }}</span>
                                         </div>
                                         <!--end::Info-->
                                     </div>
                                     <!--end::Item-->
                                     <!--begin::Item-->
-                                    <div class="d-flex align-items-center">
+                                    <div class="d-flex align-items-center me-5 me-xl-13">
                                         <!--begin::Symbol-->
                                         <div class="symbol symbol-30px symbol-circle me-3">
-                            <span class="symbol-label bg-success">
-                                <!--begin::Svg Icon | path: icons/duotune/abstract/abs042.svg-->
-                                <span class="svg-icon svg-icon-5 svg-icon-white">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M18 21.6C16.6 20.4 9.1 20.3 6.3 21.2C5.7 21.4 5.1 21.2 4.7 20.8L2 18C4.2 15.8 10.8 15.1 15.8 15.8C16.2 18.3 17 20.5 18 21.6ZM18.8 2.8C18.4 2.4 17.8 2.20001 17.2 2.40001C14.4 3.30001 6.9 3.2 5.5 2C6.8 3.3 7.4 5.5 7.7 7.7C9 7.9 10.3 8 11.7 8C15.8 8 19.8 7.2 21.5 5.5L18.8 2.8Z" fill="currentColor"></path>
-                                        <path opacity="0.3" d="M21.2 17.3C21.4 17.9 21.2 18.5 20.8 18.9L18 21.6C15.8 19.4 15.1 12.8 15.8 7.8C18.3 7.4 20.4 6.70001 21.5 5.60001C20.4 7.00001 20.2 14.5 21.2 17.3ZM8 11.7C8 9 7.7 4.2 5.5 2L2.8 4.8C2.4 5.2 2.2 5.80001 2.4 6.40001C2.7 7.40001 3.00001 9.2 3.10001 11.7C3.10001 15.5 2.40001 17.6 2.10001 18C3.20001 16.9 5.3 16.2 7.8 15.8C8 14.2 8 12.7 8 11.7Z" fill="currentColor"></path>
-                                    </svg>
-                                </span>
-                                <!--end::Svg Icon-->
-                            </span>
+                                            <span class="symbol-label bg-success">
+                                                <!--begin::Svg Icon | path: icons/duotune/abstract/abs042.svg-->
+                                                <span class="svg-icon svg-icon-5 svg-icon-white">
+                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M18 21.6C16.6 20.4 9.1 20.3 6.3 21.2C5.7 21.4 5.1 21.2 4.7 20.8L2 18C4.2 15.8 10.8 15.1 15.8 15.8C16.2 18.3 17 20.5 18 21.6ZM18.8 2.8C18.4 2.4 17.8 2.20001 17.2 2.40001C14.4 3.30001 6.9 3.2 5.5 2C6.8 3.3 7.4 5.5 7.7 7.7C9 7.9 10.3 8 11.7 8C15.8 8 19.8 7.2 21.5 5.5L18.8 2.8Z" fill="currentColor"></path>
+                                                        <path opacity="0.3" d="M21.2 17.3C21.4 17.9 21.2 18.5 20.8 18.9L18 21.6C15.8 19.4 15.1 12.8 15.8 7.8C18.3 7.4 20.4 6.70001 21.5 5.60001C20.4 7.00001 20.2 14.5 21.2 17.3ZM8 11.7C8 9 7.7 4.2 5.5 2L2.8 4.8C2.4 5.2 2.2 5.80001 2.4 6.40001C2.7 7.40001 3.00001 9.2 3.10001 11.7C3.10001 15.5 2.40001 17.6 2.10001 18C3.20001 16.9 5.3 16.2 7.8 15.8C8 14.2 8 12.7 8 11.7Z" fill="currentColor"></path>
+                                                    </svg>
+                                                </span>
+                                                <!--end::Svg Icon-->
+                                            </span>
                                         </div>
                                         <!--end::Symbol-->
                                         <!--begin::Info-->
@@ -74,6 +75,31 @@
                                         <!--end::Info-->
                                     </div>
                                     <!--end::Item-->
+                                    <!--begin::Item-->
+                                    <div class="d-flex align-items-center me-5 me-xl-13">
+                                        <!--begin::Symbol-->
+                                        <div class="symbol symbol-30px symbol-circle me-3">
+                                            <span class="symbol-label bg-success">
+                                                <!--begin::Svg Icon | path: icons/duotune/abstract/abs042.svg-->
+                                                <span class="svg-icon svg-icon-5 svg-icon-white">
+                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M18 21.6C16.6 20.4 9.1 20.3 6.3 21.2C5.7 21.4 5.1 21.2 4.7 20.8L2 18C4.2 15.8 10.8 15.1 15.8 15.8C16.2 18.3 17 20.5 18 21.6ZM18.8 2.8C18.4 2.4 17.8 2.20001 17.2 2.40001C14.4 3.30001 6.9 3.2 5.5 2C6.8 3.3 7.4 5.5 7.7 7.7C9 7.9 10.3 8 11.7 8C15.8 8 19.8 7.2 21.5 5.5L18.8 2.8Z" fill="currentColor"></path>
+                                                        <path opacity="0.3" d="M21.2 17.3C21.4 17.9 21.2 18.5 20.8 18.9L18 21.6C15.8 19.4 15.1 12.8 15.8 7.8C18.3 7.4 20.4 6.70001 21.5 5.60001C20.4 7.00001 20.2 14.5 21.2 17.3ZM8 11.7C8 9 7.7 4.2 5.5 2L2.8 4.8C2.4 5.2 2.2 5.80001 2.4 6.40001C2.7 7.40001 3.00001 9.2 3.10001 11.7C3.10001 15.5 2.40001 17.6 2.10001 18C3.20001 16.9 5.3 16.2 7.8 15.8C8 14.2 8 12.7 8 11.7Z" fill="currentColor"></path>
+                                                    </svg>
+                                                </span>
+                                                <!--end::Svg Icon-->
+                                            </span>
+                                        </div>
+                                        <!--end::Symbol-->
+                                        <!--begin::Info-->
+                                        <div class="m-0">
+                                            <span class="fw-semibold text-gray-400 d-block fs-8">Город</span>
+                                            <span class="fw-bold text-gray-800 fs-7">Томск</span>
+                                        </div>
+                                        <!--end::Info-->
+                                    </div>
+                                    <!--end::Item-->
+
                                 </div>
                                 <!--end::Items-->
                             </div>
@@ -82,16 +108,17 @@
                             <div class="mb-6">
                                 <!--begin::Text-->
                                 <span class="fw-semibold text-gray-600 fs-6 mb-8 d-block">
-                        {{ $value['pre-text'] }}
-                    </span>
+                                    {{ $value['pre-text'] }}
+                                </span>
                                 <!--end::Text-->
-
                             </div>
                             <!--end::Body-->
                             <!--begin::Footer-->
+
                             <div class="d-flex flex-stack mt-auto bd-highlight">
+
                                 <!--begin::Actions-->
-                                <a href="?page=apps/projects/project" class="text-primary opacity-75-hover fs-6 fw-semibold">Узнать больше или связаться
+                                <a href="#" class="text-primary opacity-75-hover fs-6 fw-semibold" data-bs-toggle="modal" data-bs-target="#about_{{ $key }}">Узнать больше или связаться
                                     <!--begin::Svg Icon | path: icons/duotune/arrows/arr095.svg-->
                                     <span class="svg-icon svg-icon-4 svg-icon-gray-800 ms-1">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -102,6 +129,7 @@
                 </span>
                                     <!--end::Svg Icon--></a>
                                 <!--end::Actions-->
+
                             </div>
                             <!--end::Footer-->
                         </div>
@@ -117,5 +145,6 @@
     @endforeach
     @endif
 
+    @include('pages.specialists.modals.full')
 
 </div>

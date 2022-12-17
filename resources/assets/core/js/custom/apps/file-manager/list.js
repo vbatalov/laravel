@@ -6,7 +6,7 @@ var KTFileManagerList = function () {
     var datatable;
     var table
 
-    // Define template element variables
+    // Define demo3 element variables
     var uploadTemplate;
     var renameTemplate;
     var actionTemplate;
@@ -15,10 +15,10 @@ var KTFileManagerList = function () {
 
     // Private functions
     const initTemplates = () => {
-        uploadTemplate = document.querySelector('[data-kt-filemanager-template="upload"]');
-        renameTemplate = document.querySelector('[data-kt-filemanager-template="rename"]');
-        actionTemplate = document.querySelector('[data-kt-filemanager-template="action"]');
-        checkboxTemplate = document.querySelector('[data-kt-filemanager-template="checkbox"]');
+        uploadTemplate = document.querySelector('[data-kt-filemanager-demo3="upload"]');
+        renameTemplate = document.querySelector('[data-kt-filemanager-demo3="rename"]');
+        actionTemplate = document.querySelector('[data-kt-filemanager-demo3="action"]');
+        checkboxTemplate = document.querySelector('[data-kt-filemanager-demo3="checkbox"]');
     }
 
     const initDatatable = () => {
@@ -249,7 +249,7 @@ var KTFileManagerList = function () {
         const toolbarSelected = document.querySelector('[data-kt-filemanager-table-toolbar="selected"]');
         const selectedCount = document.querySelector('[data-kt-filemanager-table-select="selected_count"]');
 
-        // Select refreshed checkbox DOM elements 
+        // Select refreshed checkbox DOM elements
         const allCheckboxes = table.querySelectorAll('tbody [type="checkbox"]');
 
         // Detect checkboxes state & count
@@ -291,10 +291,10 @@ var KTFileManagerList = function () {
 
             // Add new blank row to datatable
             const tableBody = table.querySelector('tbody');
-            const rowElement = uploadTemplate.cloneNode(true); // Clone template markup
+            const rowElement = uploadTemplate.cloneNode(true); // Clone demo3 markup
             tableBody.prepend(rowElement);
 
-            // Define template interactive elements
+            // Define demo3 interactive elements
             const rowForm = rowElement.querySelector('#kt_file_manager_add_folder_form');
             const rowButton = rowElement.querySelector('#kt_file_manager_add_folder');
             const cancelButton = rowElement.querySelector('#kt_file_manager_cancel_folder');
@@ -453,7 +453,7 @@ var KTFileManagerList = function () {
 
     // Handle rename file or folder
     const handleRename = () => {
-        const renameButton = table.querySelectorAll('[data-kt-filemanager-table="rename"]');     
+        const renameButton = table.querySelectorAll('[data-kt-filemanager-table="rename"]');
 
         renameButton.forEach(button => {
             button.addEventListener('click', renameCallback);
@@ -490,11 +490,11 @@ var KTFileManagerList = function () {
         const colIcon = nameCol.querySelector('.svg-icon');
         nameValue = nameCol.innerText;
 
-        // Set rename input template
+        // Set rename input demo3
         const renameInput = renameTemplate.cloneNode(true);
         renameInput.querySelector('#kt_file_manager_rename_folder_icon').innerHTML = colIcon.outerHTML;
 
-        // Swap current column content with input template
+        // Swap current column content with input demo3
         nameCol.innerHTML = renameInput.innerHTML;
 
         // Set input value with current file/folder name
@@ -561,7 +561,7 @@ var KTFileManagerList = function () {
                                     // Get new file / folder name value
                                     const newValue = document.querySelector('#kt_file_manager_rename_input').value;
 
-                                    // New column data template
+                                    // New column data demo3
                                     const newData = `<div class="d-flex align-items-center">
                                         ${colIcon.outerHTML}
                                         <a href="?page=apps/file-manager/files/" class="text-gray-800 text-hover-primary">${newValue}</a>
@@ -636,7 +636,7 @@ var KTFileManagerList = function () {
         const id = "#kt_modal_upload_dropzone";
         const dropzone = document.querySelector(id);
 
-        // set the preview element template
+        // set the preview element demo3
         var previewNode = dropzone.querySelector(".dropzone-item");
         previewNode.id = "";
         var previewTemplate = previewNode.parentNode.innerHTML;
@@ -854,8 +854,8 @@ var KTFileManagerList = function () {
                                 }
                             }).then(function (result) {
                                 if (result.isConfirmed) {
-                                    form.reset(); // Reset form	
-                                    moveModal.hide(); // Hide modal			
+                                    form.reset(); // Reset form
+                                    moveModal.hide(); // Hide modal
 
                                     toastr.options = {
                                         "closeButton": true,

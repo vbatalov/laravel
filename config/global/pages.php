@@ -130,6 +130,17 @@ return array(
             ),
         ),
     ),
+    'specialist' => array(
+        'title'  => 'Специалисты',
+        'description' => 'описание',
+        'assets' => array(
+            'custom' => array(
+                'js'  => array(
+
+                ),
+            ),
+        ),
+    ),
 
     'error' => array(
         'error-404' => array(

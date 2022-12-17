@@ -45,14 +45,14 @@ $messages = array(
 
 
     array(
-        'template' => true,
+        'demo3' => true,
         'user'     => 2,
         'type'     => 'out',
         'text'     => '',
         'time'     => 'Just now'
     ),
     array(
-        'template' => true,
+        'demo3' => true,
         'user'     => 4,
         'type'     => 'in',
         'text'     => 'Right before vacation season we have the next Big Deal for you.',
@@ -66,12 +66,12 @@ $messages = array(
         $user = \App\Core\Data::getSampleUserInfo($message['user']);
         $user['size'] = '35px';
         $state =  $message['type'] === 'in' ? 'info' : 'primary';
-        $comment = (isset($message['template']) ? 'template for ' : '') . $message['type'];
-        $template_attr = (isset($message['template']) ? 'data-kt-element="template-' . $message['type'] . '"' : '');
+        $comment = (isset($message['demo3']) ? 'demo3 for ' : '') . $message['type'];
+        $template_attr = (isset($message['demo3']) ? 'data-kt-element="demo3-' . $message['type'] . '"' : '');
     @endphp
 
     <!--begin::Message({{ $comment }})-->
-    <div class="d-flex justify-content-{{ $message['type'] === 'in'? 'start' : 'end' }} mb-10 {{ isset($message['template']) ? 'd-none' : '' }}" {{ $template_attr }}>
+    <div class="d-flex justify-content-{{ $message['type'] === 'in'? 'start' : 'end' }} mb-10 {{ isset($message['demo3']) ? 'd-none' : '' }}" {{ $template_attr }}>
         <!--begin::Wrapper-->
         <div class="d-flex flex-column align-items-{{ $message['type'] === 'in'? 'start' : 'end' }}">
             <!--begin::User-->

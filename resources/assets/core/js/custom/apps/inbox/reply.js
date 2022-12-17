@@ -114,7 +114,7 @@ var KTAppInboxReply = function () {
         });
     }
 
-    // Init tagify 
+    // Init tagify
     const initTagify = (el) => {
         var inputElm = el;
 
@@ -171,7 +171,7 @@ var KTAppInboxReply = function () {
 
         // initialize Tagify on the above input node reference
         var tagify = new Tagify(inputElm, {
-            tagTextProp: 'name', // very important since a custom template is used with this property as text. allows typing a "value" or a "name" to match input with whitelist
+            tagTextProp: 'name', // very important since a custom demo3 is used with this property as text. allows typing a "value" or a "name" to match input with whitelist
             enforceWhitelist: true,
             skipInvalid: true, // do not remporarily add invalid tags
             dropdown: {
@@ -210,7 +210,7 @@ var KTAppInboxReply = function () {
 
         // create a "add all" custom suggestion element every time the dropdown changes
         function getAddAllSuggestionsElm() {
-            // suggestions items should be based on "dropdownItem" template
+            // suggestions items should be based on "dropdownItem" demo3
             return tagify.parseTemplate('dropdownItem', [{
                 class: "addAll",
                 name: "Add all",
@@ -222,7 +222,7 @@ var KTAppInboxReply = function () {
         }
     }
 
-    // Init quill editor 
+    // Init quill editor
     const initQuill = (el) => {
         var quill = new Quill('#kt_inbox_form_editor', {
             modules: {
@@ -254,7 +254,7 @@ var KTAppInboxReply = function () {
         const dropzone = el.querySelector(id);
         const uploadButton = el.querySelector('[data-kt-inbox-form="dropzone_upload"]');
 
-        // set the preview element template
+        // set the preview element demo3
         var previewNode = dropzone.querySelector(".dropzone-item");
         previewNode.id = "";
         var previewTemplate = previewNode.parentNode.innerHTML;

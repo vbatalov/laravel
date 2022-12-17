@@ -51,7 +51,7 @@ class Theme extends \App\Core\Theme
 
     /**
      * Print the SVG icon content as HTML
-     * Use {!! getSvgIcon !!} in blade template file
+     * Use {!! getSvgIcon !!} in blade demo3 file
      *
      * @param $path
      * @param  string  $class

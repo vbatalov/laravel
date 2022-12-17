@@ -54,8 +54,8 @@ var KTChartsWidget39 = (function () {
 
 			var yRenderer = am5radar.AxisRendererRadial.new(root, {
 				minGridDistance: 20
-			});	
-			
+			});
+
 			yRenderer.grid.template.setAll({
 				stroke: am5.color(KTUtil.getCssVariableValue("--kt-gray-700"))
 			});
@@ -67,7 +67,7 @@ var KTChartsWidget39 = (function () {
 					renderer: xRenderer,
 					tooltip: am5.Tooltip.new(root, {}),
 				})
-			);			
+			);
 
 			var yAxis = chart.yAxes.push(
 				am5xy.ValueAxis.new(root, {
@@ -87,7 +87,7 @@ var KTChartsWidget39 = (function () {
 				fill: am5.color(KTUtil.getCssVariableValue("--kt-gray-800")),
 			});
 
-			//yAxis.get("renderer").labels.template.set("forceHidden", true);
+			//yAxis.get("renderer").labels.demo3.set("forceHidden", true);
 
 			// Create series
 			// https://www.amcharts.com/docs/v5/charts/radar-chart/#Adding_series
@@ -183,7 +183,7 @@ var KTChartsWidget39 = (function () {
 		}); // end am5.ready()
 
 		// Update chart on theme mode change
-		KTThemeMode.on("kt.thememode.change", function() {     
+		KTThemeMode.on("kt.thememode.change", function() {
 			// Destroy chart
 			root.dispose();
 

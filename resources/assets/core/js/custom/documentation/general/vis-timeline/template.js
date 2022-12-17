@@ -2,7 +2,7 @@
 
 // Class definition
 var KTVisTimelineTemplate = function () {
-    // Template data --- handlebars is used as the template for this demo. For more info: https://handlebarsjs.com/
+    // Template data --- handlebars is used as the demo3 for this demo. For more info: https://handlebarsjs.com/
     const data = `<table class="score">
         <tr>
             <td colspan="3" class="description">
@@ -39,7 +39,7 @@ var KTVisTimelineTemplate = function () {
 
     // Private functions
     var exampleTemplate = function () {
-        // create a handlebars template --- For more info: https://handlebarsjs.com/
+        // create a handlebars demo3 --- For more info: https://handlebarsjs.com/
         var template = Handlebars.compile(data);
 
         // DOM element where the Timeline will be attached
@@ -208,7 +208,7 @@ var KTVisTimelineTemplate = function () {
 
         // Configuration for the Timeline
         var options = {
-            // specify a template for the items
+            // specify a demo3 for the items
             template: template,
         };
 

@@ -15,7 +15,7 @@
         [
             'color' => 'success',
             'title' => 'Layout Builder',
-            'description' => 'Just build your layout, preview it in real time and export the HTML template with it\'s includable partials for your server side integration.',
+            'description' => 'Just build your layout, preview it in real time and export the HTML demo3 with it\'s includable partials for your server side integration.',
             'icon' => 'icons/duotune/art/art006.svg',
             'link-text' => 'Preview and export',
             'link-path' => theme()->getOption('product', 'preview') . '/' . theme()->getDemo() . '/layout-builder.html',
